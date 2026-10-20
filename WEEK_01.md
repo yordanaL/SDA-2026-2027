@@ -677,7 +677,7 @@ void f(int N) {
 <details>
   <summary>Отговор</summary>
 
-* **Време:** $O(log N)$
+* **Време:** $O(\log N)$
 * **Памет:** $O(1)$
 
 </details>
@@ -697,7 +697,7 @@ void f(int N) {
 <details>
   <summary>Отговор</summary>
 
-* **Време:** $O(log N)$
+* **Време:** $O(\log N)$
 * **Памет:** $O(1)$
 
 </details>
@@ -829,7 +829,7 @@ void f(int N) {
 <details>
   <summary>Отговор</summary>
 
-* **Време:** $O(NlogN)$
+* **Време:** $O(N \log N)$
 * **Памет:** $O(1)$
 
 </details>
