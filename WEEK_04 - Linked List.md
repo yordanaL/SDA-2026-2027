@@ -240,7 +240,7 @@ if (cur != nullptr) {
 Честият шаблон при задачи е:
 
 ```cpp
-while (head != nullptr && head->next != nullptr) {
+while (iter != nullptr && iter->next != nullptr) {
     // ...
 }
 ```
