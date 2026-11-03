@@ -18,8 +18,6 @@
 
 Аналогия: купчина чинии — слагаш отгоре и махаш отгоре. Не можеш да вземеш чинията от средата на купчината.
 
-Документация: [`std::stack`](https://cplusplus.com/reference/stack/stack/) · заглавен файл [`<stack>`](https://cplusplus.com/reference/stack/)
-
 ![Стек (Stack) — анимация push/pop](images/stack_animation.svg)
 
 Примери:
@@ -65,8 +63,6 @@
 **Дефиниция:** Опашката е линейна структура от данни с достъп по правило **FIFO** — *First In, First Out*. Първият добавен елемент е и първият, който се премахва.
 
 Аналогия: опашка пред щанда — първият застанал е и първият обслужен.
-
-Документация: [`std::queue`](https://cplusplus.com/reference/queue/queue/) · заглавен файл [`<queue>`](https://cplusplus.com/reference/queue/)
 
 ![Опашка (Queue) — анимация push/pop](images/queue_animation.svg)
 
@@ -128,8 +124,6 @@
 
 **Дефиниция:** Декът (deque, съкр. от *double-ended queue*) е линейна структура от данни, при която **и добавянето, и премахването са възможни както от началото (front), така и от края (back)**.
 
-Документация: [`std::deque`](https://cplusplus.com/reference/deque/deque/) · заглавен файл [`<deque>`](https://cplusplus.com/reference/deque/)
-
 ![Дек (Deque) — анимация push_front/push_back и pop_front/pop_back](images/deque_animation.svg)
 
 ### 4.1 Операции над дека
@@ -145,15 +139,6 @@
 | `size()` | връща броя на елементите |
 
 Достъп до елементите по индекс или „по средата" пак няма.
-
-### 4.4 Сложност на операциите
-
-| Операция | Двоен свързан списък | Кръгов буфер |
-|---|---|---|
-| `push_front` / `push_back` | \(O(1)\) | амортизирано \(O(1)\) |
-| `pop_front` / `pop_back` | \(O(1)\) | амортизирано \(O(1)\) |
-| `front` / `back` | \(O(1)\) | \(O(1)\) |
-| `empty` / `size` | \(O(1)\) | \(O(1)\) |
 
 ---
 
