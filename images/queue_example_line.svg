@@ -1,0 +1,86 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="612" height="612" viewBox="0 0 612 612" role="img" aria-label="Хора на опашка пред каса — първият застанал се обслужва пръв, пример от бита за опашка (FIFO)">
+  <defs>
+    <linearGradient id="counterG" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FFFFFF"/><stop offset="1" stop-color="#E4E9EE"/></linearGradient>
+    <linearGradient id="counterTop" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#F8FAFC"/><stop offset="1" stop-color="#D8DEE6"/></linearGradient>
+    <linearGradient id="regG" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#6E9BFF"/><stop offset="1" stop-color="#4C8BF5"/></linearGradient>
+    <linearGradient id="skinG" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FBD7B5"/><stop offset="1" stop-color="#F0BE94"/></linearGradient>
+    <linearGradient id="gGreen" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#2FD19B"/><stop offset="1" stop-color="#0CA678"/></linearGradient>
+    <linearGradient id="gBlue" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#6E9BFF"/><stop offset="1" stop-color="#4C8BF5"/></linearGradient>
+    <linearGradient id="gOrange" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FFC24D"/><stop offset="1" stop-color="#F09319"/></linearGradient>
+    <linearGradient id="gSlate" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#94A3B8"/><stop offset="1" stop-color="#64748B"/></linearGradient>
+  </defs>
+
+  <rect x="0.5" y="0.5" width="611" height="611" rx="14" fill="#F8F9FA" stroke="#E4E7EB"/>
+  <line x1="30" y1="512" x2="582" y2="512" stroke="#D8DCE1" stroke-width="4" stroke-linecap="round"/>
+
+  <!-- щанд / каса -->
+  <rect x="430" y="382" width="152" height="130" rx="10" fill="url(#counterG)" stroke="#D8DCE1" stroke-width="3"/>
+  <rect x="418" y="360" width="176" height="24" rx="11" fill="url(#counterTop)" stroke="#D8DCE1" stroke-width="3"/>
+
+  <!-- касиер -->
+  <g>
+    <rect x="490" y="316" width="60" height="48" rx="22" fill="url(#gBlue)"/>
+    <circle cx="520" cy="290" r="25" fill="url(#skinG)"/>
+    <path d="M495 290 A25 25 0 0 1 545 290 Z" fill="#7C4A2D"/>
+    <circle cx="512" cy="288" r="2.6" fill="#3B302A"/>
+    <circle cx="528" cy="288" r="2.6" fill="#3B302A"/>
+  </g>
+
+  <!-- касов апарат -->
+  <rect x="448" y="312" width="66" height="50" rx="8" fill="url(#regG)"/>
+  <rect x="458" y="320" width="46" height="22" rx="4" fill="#E9ECEF"/>
+  <rect x="458" y="348" width="46" height="6" rx="3" fill="#A9C7FA"/>
+
+  <!-- опашка: първият е зелен — той се обслужва пръв -->
+  <g transform="translate(372 505)">
+    <ellipse cx="0" cy="0" rx="36" ry="9" fill="#94A3B8" opacity="0.35"/>
+    <rect x="-23" y="-64" width="19" height="64" rx="9" fill="#3B4252"/>
+    <rect x="4" y="-64" width="19" height="64" rx="9" fill="#333A49"/>
+    <rect x="-33" y="-158" width="66" height="102" rx="27" fill="url(#gGreen)"/>
+    <rect x="-33" y="-158" width="66" height="46" rx="27" fill="#FFFFFF" opacity="0.14"/>
+    <circle cx="0" cy="-186" r="27" fill="url(#skinG)"/>
+    <path d="M-27 -186 A27 27 0 0 1 27 -186 Z" fill="#4A3728"/>
+    <circle cx="-9" cy="-182" r="2.6" fill="#3B302A"/>
+    <circle cx="9" cy="-182" r="2.6" fill="#3B302A"/>
+  </g>
+  <g transform="translate(262 505)">
+    <ellipse cx="0" cy="0" rx="36" ry="9" fill="#94A3B8" opacity="0.35"/>
+    <rect x="-23" y="-64" width="19" height="64" rx="9" fill="#3B4252"/>
+    <rect x="4" y="-64" width="19" height="64" rx="9" fill="#333A49"/>
+    <rect x="-33" y="-158" width="66" height="102" rx="27" fill="url(#gSlate)"/>
+    <rect x="-33" y="-158" width="66" height="46" rx="27" fill="#FFFFFF" opacity="0.14"/>
+    <circle cx="0" cy="-186" r="27" fill="url(#skinG)"/>
+    <path d="M-27 -186 A27 27 0 0 1 27 -186 Z" fill="#5A4636"/>
+    <circle cx="-9" cy="-182" r="2.6" fill="#3B302A"/>
+    <circle cx="9" cy="-182" r="2.6" fill="#3B302A"/>
+  </g>
+  <g transform="translate(158 505)">
+    <ellipse cx="0" cy="0" rx="36" ry="9" fill="#94A3B8" opacity="0.35"/>
+    <rect x="-23" y="-64" width="19" height="64" rx="9" fill="#3B4252"/>
+    <rect x="4" y="-64" width="19" height="64" rx="9" fill="#333A49"/>
+    <rect x="-33" y="-158" width="66" height="102" rx="27" fill="url(#gOrange)"/>
+    <rect x="-33" y="-158" width="66" height="46" rx="27" fill="#FFFFFF" opacity="0.14"/>
+    <circle cx="0" cy="-186" r="27" fill="url(#skinG)"/>
+    <path d="M-27 -186 A27 27 0 0 1 27 -186 Z" fill="#2E2420"/>
+    <circle cx="-9" cy="-182" r="2.6" fill="#3B302A"/>
+    <circle cx="9" cy="-182" r="2.6" fill="#3B302A"/>
+  </g>
+  <g transform="translate(58 505)">
+    <ellipse cx="0" cy="0" rx="36" ry="9" fill="#94A3B8" opacity="0.35"/>
+    <rect x="-23" y="-64" width="19" height="64" rx="9" fill="#3B4252"/>
+    <rect x="4" y="-64" width="19" height="64" rx="9" fill="#333A49"/>
+    <rect x="-33" y="-158" width="66" height="102" rx="27" fill="url(#gBlue)"/>
+    <rect x="-33" y="-158" width="66" height="46" rx="27" fill="#FFFFFF" opacity="0.14"/>
+    <circle cx="0" cy="-186" r="27" fill="url(#skinG)"/>
+    <path d="M-27 -186 A27 27 0 0 1 27 -186 Z" fill="#7C4A2D"/>
+    <circle cx="-9" cy="-182" r="2.6" fill="#3B302A"/>
+    <circle cx="9" cy="-182" r="2.6" fill="#3B302A"/>
+  </g>
+
+  <!-- стрелка към касата -->
+  <path d="M368 250 H440" stroke="#12B886" stroke-width="7" stroke-linecap="round"/>
+  <polygon points="466,250 440,239 440,261" fill="#12B886"/>
+  <text x="596" y="222" text-anchor="end" font-size="17" font-weight="600" fill="#12B886" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif">първият — на касата</text>
+
+  <text x="306" y="570" text-anchor="middle" font-size="19" font-weight="600" fill="#6B7280" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif">опашка пред каса</text>
+</svg>

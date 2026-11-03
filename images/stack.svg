@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="360" viewBox="0 0 720 360" role="img" aria-label="Стек (Stack)">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#1F2933"/>
+    </marker>
+    <marker id="arrowBlue" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4C8BF5"/>
+    </marker>
+    <marker id="arrowGreen" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#12B886"/>
+    </marker>
+  </defs>
+  <rect x="0.5" y="0.5" width="719" height="359" rx="14" fill="#F8F9FA" stroke="#E4E7EB"/>
+  <text x="360" y="40" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="20" font-weight="700" fill="#1F2933">Стек (Stack)</text>
+  <text x="360" y="66" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="14" fill="#6B7280">LIFO — Last In, First Out: последният добавен елемент се изважда пръв.</text>
+
+  <rect x="270" y="100" width="180" height="58" rx="10" fill="#4C8BF5"/>
+  <text x="360" y="137" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="22" font-weight="700" fill="#FFFFFF">7</text>
+  <rect x="270" y="166" width="180" height="58" rx="10" fill="#4C8BF5"/>
+  <text x="360" y="203" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="22" font-weight="700" fill="#FFFFFF">2</text>
+  <rect x="270" y="232" width="180" height="58" rx="10" fill="#4C8BF5"/>
+  <text x="360" y="269" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="22" font-weight="700" fill="#FFFFFF">4</text>
+
+  <text x="240" y="134" text-anchor="end" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="14" font-weight="700" fill="#1F2933">top</text>
+  <line x1="250" y1="130" x2="266" y2="130" stroke="#1F2933" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <line x1="606" y1="120" x2="454" y2="130" stroke="#4C8BF5" stroke-width="2" marker-end="url(#arrowBlue)"/>
+  <text x="610" y="114" text-anchor="start" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="13" font-weight="700" fill="#4C8BF5">push(x)</text>
+
+  <line x1="454" y1="146" x2="606" y2="156" stroke="#12B886" stroke-width="2" marker-end="url(#arrowGreen)"/>
+  <text x="610" y="160" text-anchor="start" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="13" font-weight="700" fill="#12B886">pop()</text>
+
+  <text x="360" y="312" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="14" font-weight="700" fill="#1F2933">основа (bottom)</text>
+  <text x="360" y="342" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="12" fill="#6B7280">push добавя на върха, pop маха от върха — достъп до елементите по-долу няма.</text>
+</svg>

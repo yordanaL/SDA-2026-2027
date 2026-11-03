@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="612" height="612" viewBox="0 0 612 612" role="img" aria-label="Плъзгащ прозорец върху лента с кашони — рамката обхваща три кашона и се плъзга и от двата края, пример за дек (Deque)">
+  <defs>
+    <linearGradient id="boxG" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FFFFFF"/><stop offset="1" stop-color="#EEF1F5"/></linearGradient>
+    <linearGradient id="beltG" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#F1F3F5"/><stop offset="1" stop-color="#DEE2E6"/></linearGradient>
+  </defs>
+
+  <rect x="0.5" y="0.5" width="611" height="611" rx="14" fill="#F8F9FA" stroke="#E4E7EB"/>
+
+  <!-- под (общ стил): y=512 -->
+  <line x1="40" y1="512" x2="572" y2="512" stroke="#D8DCE1" stroke-width="4" stroke-linecap="round"/>
+  <ellipse cx="306" cy="508" rx="250" ry="12" fill="#E4E7EB"/>
+
+  <!-- максимум в текущата рамка -->
+  <rect x="246" y="224" width="120" height="40" rx="20" fill="#12B886"/>
+  <text x="306" y="250" text-anchor="middle" font-size="17" font-weight="600" fill="#FFFFFF" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif">макс = 4</text>
+
+  <!-- рамката се плъзга и от двата края -->
+  <text x="306" y="292" text-anchor="middle" font-size="17" font-weight="600" fill="#12B886" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif">рамката се плъзга от двата края</text>
+  <path d="M186 322 H426" stroke="#12B886" stroke-width="7" stroke-linecap="round"/>
+  <polygon points="162,322 186,311 186,333" fill="#12B886"/>
+  <polygon points="450,322 426,311 426,333" fill="#12B886"/>
+
+  <!-- лента -->
+  <rect x="44" y="448" width="524" height="30" rx="15" fill="url(#beltG)" stroke="#CED4DA" stroke-width="3"/>
+  <line x1="66" y1="463" x2="546" y2="463" stroke="#ADB5BD" stroke-width="3" stroke-linecap="round" stroke-dasharray="18 14"/>
+  <g fill="#ADB5BD">
+    <rect x="96" y="478" width="18" height="34" rx="6"/>
+    <rect x="232" y="478" width="18" height="34" rx="6"/>
+    <rect x="368" y="478" width="18" height="34" rx="6"/>
+    <rect x="504" y="478" width="18" height="34" rx="6"/>
+  </g>
+
+  <!-- кашони с числа -->
+  <g font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif" font-size="36" font-weight="700" text-anchor="middle" fill="#495057">
+    <rect x="78" y="368" width="80" height="80" rx="10" fill="url(#boxG)" stroke="#CED4DA" stroke-width="3"/>
+    <text x="118" y="420">3</text>
+
+    <rect x="172" y="368" width="80" height="80" rx="10" fill="url(#boxG)" stroke="#CED4DA" stroke-width="3"/>
+    <text x="212" y="420">1</text>
+
+    <rect x="266" y="368" width="80" height="80" rx="10" fill="url(#boxG)" stroke="#CED4DA" stroke-width="3"/>
+    <text x="306" y="420">4</text>
+
+    <rect x="360" y="368" width="80" height="80" rx="10" fill="url(#boxG)" stroke="#CED4DA" stroke-width="3"/>
+    <text x="400" y="420">1</text>
+
+    <rect x="454" y="368" width="80" height="80" rx="10" fill="url(#boxG)" stroke="#CED4DA" stroke-width="3"/>
+    <text x="494" y="420">5</text>
+  </g>
+
+  <!-- зелена рамка: прозорецът -->
+  <rect x="162" y="356" width="288" height="96" rx="16" fill="none" stroke="#12B886" stroke-width="5"/>
+
+  <text x="306" y="570" text-anchor="middle" font-size="19" font-weight="600" fill="#6B7280" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif">плъзгащ прозорец — максимум в рамката</text>
+</svg>

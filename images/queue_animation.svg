@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="300" viewBox="0 0 720 300" role="img" aria-label="Опашка — анимация: push и pop">
+  <style>
+    text { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; }
+    .el { animation-duration: 15s; animation-timing-function: ease-in-out; animation-iteration-count: infinite; }
+    .e4 { animation-name: e4; }
+    .e2 { animation-name: e2; }
+    .e7 { animation-name: e7; }
+    .e5 { animation-name: e5; }
+    .e9 { animation-name: e9; }
+    @keyframes e4 { 0% { transform: translateX(680px); } 6% { transform: translateX(0); } 30% { transform: translateX(0); } 36% { transform: translateX(-190px); } 100% { transform: translateX(-190px); } }
+    @keyframes e2 { 0% { transform: translateX(520px); } 10% { transform: translateX(520px); } 16% { transform: translateX(0); } 30% { transform: translateX(0); } 36% { transform: translateX(-160px); } 60% { transform: translateX(-160px); } 66% { transform: translateX(-350px); } 100% { transform: translateX(-350px); } }
+    @keyframes e7 { 0% { transform: translateX(360px); } 20% { transform: translateX(360px); } 26% { transform: translateX(0); } 30% { transform: translateX(0); } 36% { transform: translateX(-160px); } 60% { transform: translateX(-160px); } 66% { transform: translateX(-320px); } 70% { transform: translateX(-320px); } 76% { transform: translateX(-510px); } 100% { transform: translateX(-510px); } }
+    @keyframes e5 { 0% { transform: translateX(360px); } 40% { transform: translateX(360px); } 46% { transform: translateX(0); } 60% { transform: translateX(0); } 66% { transform: translateX(-160px); } 70% { transform: translateX(-160px); } 76% { transform: translateX(-320px); } 80% { transform: translateX(-320px); } 86% { transform: translateX(-510px); } 100% { transform: translateX(-510px); } }
+    @keyframes e9 { 0% { transform: translateX(200px); } 50% { transform: translateX(200px); } 56% { transform: translateX(0); } 60% { transform: translateX(0); } 66% { transform: translateX(-160px); } 70% { transform: translateX(-160px); } 76% { transform: translateX(-320px); } 80% { transform: translateX(-320px); } 86% { transform: translateX(-480px); } 90% { transform: translateX(-480px); } 96% { transform: translateX(-670px); } 100% { transform: translateX(-670px); } }
+    .lbl { opacity: 0; animation-duration: 15s; animation-timing-function: step-end; animation-iteration-count: infinite; }
+    .p4 { animation-name: p4; }
+    .p2 { animation-name: p2; }
+    .p7 { animation-name: p7; }
+    .p5 { animation-name: p5; }
+    .p9 { animation-name: p9; }
+    .pp { animation-name: pp; }
+    @keyframes p4 { 0% { opacity: 1; } 10% { opacity: 0; } }
+    @keyframes p2 { 0% { opacity: 0; } 10% { opacity: 1; } 20% { opacity: 0; } }
+    @keyframes p7 { 0% { opacity: 0; } 20% { opacity: 1; } 30% { opacity: 0; } }
+    @keyframes p5 { 0% { opacity: 0; } 40% { opacity: 1; } 50% { opacity: 0; } }
+    @keyframes p9 { 0% { opacity: 0; } 50% { opacity: 1; } 60% { opacity: 0; } }
+    @keyframes pp { 0% { opacity: 0; } 30% { opacity: 1; } 40% { opacity: 0; } 60% { opacity: 1; } }
+  </style>
+  <rect x="0.5" y="0.5" width="719" height="299" rx="14" fill="#F8F9FA" stroke="#E4E7EB"/>
+  <text x="360" y="44" text-anchor="middle" font-size="20" font-weight="700" fill="#1F2933">Опашка (Queue)</text>
+  <line x1="24" y1="114" x2="696" y2="114" stroke="#1F2933" stroke-width="2" stroke-linecap="round"/>
+  <line x1="24" y1="210" x2="696" y2="210" stroke="#1F2933" stroke-width="2" stroke-linecap="round"/>
+  <g class="el e4">
+    <rect x="40" y="130" width="140" height="64" rx="10" fill="#4C8BF5"/>
+    <text x="110" y="170" text-anchor="middle" font-size="22" font-weight="700" fill="#FFFFFF">4</text>
+  </g>
+  <g class="el e2">
+    <rect x="200" y="130" width="140" height="64" rx="10" fill="#4C8BF5"/>
+    <text x="270" y="170" text-anchor="middle" font-size="22" font-weight="700" fill="#FFFFFF">2</text>
+  </g>
+  <g class="el e7">
+    <rect x="360" y="130" width="140" height="64" rx="10" fill="#4C8BF5"/>
+    <text x="430" y="170" text-anchor="middle" font-size="22" font-weight="700" fill="#FFFFFF">7</text>
+  </g>
+  <g class="el e5">
+    <rect x="360" y="130" width="140" height="64" rx="10" fill="#4C8BF5"/>
+    <text x="430" y="170" text-anchor="middle" font-size="22" font-weight="700" fill="#FFFFFF">5</text>
+  </g>
+  <g class="el e9">
+    <rect x="520" y="130" width="140" height="64" rx="10" fill="#4C8BF5"/>
+    <text x="590" y="170" text-anchor="middle" font-size="22" font-weight="700" fill="#FFFFFF">9</text>
+  </g>
+  <text class="lbl p4" x="360" y="252" text-anchor="middle" font-size="16" font-weight="700" fill="#4C8BF5">push(4)</text>
+  <text class="lbl p2" x="360" y="252" text-anchor="middle" font-size="16" font-weight="700" fill="#4C8BF5">push(2)</text>
+  <text class="lbl p7" x="360" y="252" text-anchor="middle" font-size="16" font-weight="700" fill="#4C8BF5">push(7)</text>
+  <text class="lbl p5" x="360" y="252" text-anchor="middle" font-size="16" font-weight="700" fill="#4C8BF5">push(5)</text>
+  <text class="lbl p9" x="360" y="252" text-anchor="middle" font-size="16" font-weight="700" fill="#4C8BF5">push(9)</text>
+  <text class="lbl pp" x="360" y="252" text-anchor="middle" font-size="16" font-weight="700" fill="#12B886">pop()</text>
+</svg>

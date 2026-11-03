@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="612" height="612" viewBox="0 0 612 612" role="img" aria-label="Вложени колички в магазин — първата се използва пръва, пример от бита за опашка (FIFO)">
+  <defs>
+    <linearGradient id="cartG" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FFFFFF"/><stop offset="1" stop-color="#E7ECF1"/></linearGradient>
+    <linearGradient id="cartGo" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FFF9E6"/><stop offset="1" stop-color="#FBE3B3"/></linearGradient>
+    <linearGradient id="cartGr" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#EAFCF5"/><stop offset="1" stop-color="#C7F0DF"/></linearGradient>
+    <g id="cartwheel">
+      <circle cx="0" cy="0" r="13" fill="#2B323E"/>
+      <circle cx="0" cy="0" r="5" fill="#868E96"/>
+    </g>
+  </defs>
+
+  <rect x="0.5" y="0.5" width="611" height="611" rx="14" fill="#F8F9FA" stroke="#E4E7EB"/>
+  <line x1="25" y1="512" x2="587" y2="512" stroke="#D8DCE1" stroke-width="4" stroke-linecap="round"/>
+
+  <!-- сцена -->
+  <g transform="translate(0 34)">
+
+  <!-- количка 1 (най-зад) — синя -->
+  <g transform="translate(0 0)">
+    <ellipse cx="156" cy="474" rx="78" ry="9" fill="#94A3B8" opacity="0.35"/>
+    <path d="M57 262 L87 276" stroke="#1F2933" stroke-width="8" stroke-linecap="round"/>
+    <path d="M81 276 L231 276 L215 348 L97 348 Z" fill="url(#cartG)" stroke="#4C8BF5" stroke-width="5" stroke-linejoin="round"/>
+    <path d="M118.5 276 L126.5 348 M156 276 L156 348 M193.5 276 L185.5 348" stroke="#4C8BF5" stroke-width="2.5" opacity="0.4"/>
+    <path d="M115 348 L123 462 M197 348 L191 462" stroke="#6B7280" stroke-width="6" stroke-linecap="round"/>
+    <use href="#cartwheel" x="123" y="462"/>
+    <use href="#cartwheel" x="191" y="462"/>
+  </g>
+
+  <!-- количка 2 — сива -->
+  <g>
+    <ellipse cx="256" cy="474" rx="78" ry="9" fill="#94A3B8" opacity="0.35"/>
+    <path d="M157 262 L187 276" stroke="#1F2933" stroke-width="8" stroke-linecap="round"/>
+    <path d="M181 276 L331 276 L315 348 L197 348 Z" fill="url(#cartG)" stroke="#64748B" stroke-width="5" stroke-linejoin="round"/>
+    <path d="M218.5 276 L226.5 348 M256 276 L256 348 M293.5 276 L285.5 348" stroke="#64748B" stroke-width="2.5" opacity="0.4"/>
+    <path d="M215 348 L223 462 M297 348 L291 462" stroke="#6B7280" stroke-width="6" stroke-linecap="round"/>
+    <use href="#cartwheel" x="223" y="462"/>
+    <use href="#cartwheel" x="291" y="462"/>
+  </g>
+
+  <!-- количка 3 — оранжева -->
+  <g>
+    <ellipse cx="356" cy="474" rx="78" ry="9" fill="#94A3B8" opacity="0.35"/>
+    <path d="M257 262 L287 276" stroke="#1F2933" stroke-width="8" stroke-linecap="round"/>
+    <path d="M281 276 L431 276 L415 348 L297 348 Z" fill="url(#cartGo)" stroke="#F09319" stroke-width="5" stroke-linejoin="round"/>
+    <path d="M318.5 276 L326.5 348 M356 276 L356 348 M393.5 276 L385.5 348" stroke="#F09319" stroke-width="2.5" opacity="0.4"/>
+    <path d="M315 348 L323 462 M397 348 L391 462" stroke="#6B7280" stroke-width="6" stroke-linecap="round"/>
+    <use href="#cartwheel" x="323" y="462"/>
+    <use href="#cartwheel" x="391" y="462"/>
+  </g>
+
+  <!-- количка 4 (напред) — зелената се взема пръва -->
+  <g>
+    <ellipse cx="456" cy="474" rx="78" ry="9" fill="#94A3B8" opacity="0.35"/>
+    <path d="M357 262 L387 276" stroke="#1F2933" stroke-width="8" stroke-linecap="round"/>
+    <path d="M381 276 L531 276 L515 348 L397 348 Z" fill="url(#cartGr)" stroke="#0CA678" stroke-width="5" stroke-linejoin="round"/>
+    <path d="M418.5 276 L426.5 348 M456 276 L456 348 M493.5 276 L485.5 348" stroke="#0CA678" stroke-width="2.5" opacity="0.4"/>
+    <path d="M415 348 L423 462 M497 348 L491 462" stroke="#6B7280" stroke-width="6" stroke-linecap="round"/>
+    <use href="#cartwheel" x="423" y="462"/>
+    <use href="#cartwheel" x="491" y="462"/>
+  </g>
+
+  <!-- стрелка: първата се взема -->
+  <path d="M456 236 V188" stroke="#12B886" stroke-width="7" stroke-linecap="round"/>
+  <polygon points="456,162 442,188 470,188" fill="#12B886"/>
+  <text x="596" y="154" text-anchor="end" font-size="17" font-weight="600" fill="#12B886" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif">първата се взема</text>
+  </g>
+
+  <text x="306" y="570" text-anchor="middle" font-size="19" font-weight="600" fill="#6B7280" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif">колички в магазин</text>
+</svg>

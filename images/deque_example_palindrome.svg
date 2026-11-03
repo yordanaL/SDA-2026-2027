@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="612" height="612" viewBox="0 0 612 612" role="img" aria-label="Проверка за палиндром АБОБА — сравняваш първата и последната буква, приближавайки се навътре от двата края, пример за дек (Deque)">
+  <defs>
+    <linearGradient id="tileG" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FFFFFF"/><stop offset="1" stop-color="#EEF1F5"/></linearGradient>
+    <linearGradient id="tileEdge" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#2FD19B"/><stop offset="1" stop-color="#0CA678"/></linearGradient>
+  </defs>
+  <rect x="0.5" y="0.5" width="611" height="611" rx="14" fill="#F8F9FA" stroke="#E4E7EB"/>
+
+  <!-- под (общ стил): y=512 -->
+  <line x1="40" y1="512" x2="572" y2="512" stroke="#D8DCE1" stroke-width="4" stroke-linecap="round"/>
+  <ellipse cx="306" cy="508" rx="250" ry="12" fill="#E4E7EB"/>
+
+  <!-- плочки с букви: АБОБА (палиндром) -->
+  <g font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif" font-size="54" font-weight="700" text-anchor="middle">
+    <rect x="46" y="388" width="88" height="118" rx="14" fill="url(#tileEdge)"/>
+    <text x="90" y="466" fill="#FFFFFF">А</text>
+
+    <rect x="154" y="388" width="88" height="118" rx="14" fill="url(#tileG)" stroke="#D8DCE1" stroke-width="3"/>
+    <text x="198" y="466" fill="#495057">Б</text>
+
+    <rect x="262" y="388" width="88" height="118" rx="14" fill="url(#tileG)" stroke="#D8DCE1" stroke-width="3"/>
+    <text x="306" y="466" fill="#495057">О</text>
+
+    <rect x="370" y="388" width="88" height="118" rx="14" fill="url(#tileG)" stroke="#D8DCE1" stroke-width="3"/>
+    <text x="414" y="466" fill="#495057">Б</text>
+
+    <rect x="478" y="388" width="88" height="118" rx="14" fill="url(#tileEdge)"/>
+    <text x="522" y="466" fill="#FFFFFF">А</text>
+  </g>
+
+  <!-- стрелки: приближаваш се навътре от двата края -->
+  <path d="M44 350 H132" stroke="#12B886" stroke-width="6" stroke-linecap="round"/>
+  <polygon points="156,350 132,340 132,360" fill="#12B886"/>
+  <path d="M568 350 H480" stroke="#12B886" stroke-width="6" stroke-linecap="round"/>
+  <polygon points="460,350 484,340 484,360" fill="#12B886"/>
+  <text x="89" y="334" text-anchor="middle" font-size="17" font-weight="600" fill="#12B886" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif">първата</text>
+  <text x="523" y="334" text-anchor="middle" font-size="17" font-weight="600" fill="#12B886" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif">последната</text>
+
+  <!-- знак за съвпадение -->
+  <circle cx="306" cy="286" r="26" fill="#12B886"/>
+  <path d="M293 286 L302 295 L320 277" fill="none" stroke="#FFFFFF" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="306" y="248" text-anchor="middle" font-size="16" font-weight="600" fill="#868E96" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif">съвпадат</text>
+
+  <text x="306" y="570" text-anchor="middle" font-size="19" font-weight="600" fill="#6B7280" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif">палиндром — приближаваш се от двата края</text>
+</svg>

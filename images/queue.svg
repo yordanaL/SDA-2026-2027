@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="280" viewBox="0 0 720 280" role="img" aria-label="Опашка (Queue)">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#1F2933"/>
+    </marker>
+    <marker id="arrowBlue" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4C8BF5"/>
+    </marker>
+    <marker id="arrowGreen" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#12B886"/>
+    </marker>
+  </defs>
+  <rect x="0.5" y="0.5" width="719" height="279" rx="14" fill="#F8F9FA" stroke="#E4E7EB"/>
+  <text x="360" y="40" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="20" font-weight="700" fill="#1F2933">Опашка (Queue)</text>
+  <text x="360" y="66" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="14" fill="#6B7280">FIFO — First In, First Out: първият добавен елемент се изважда пръв.</text>
+
+  <text x="200" y="118" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="14" font-weight="700" fill="#1F2933">front</text>
+  <line x1="200" y1="124" x2="200" y2="144" stroke="#1F2933" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="560" y="118" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="14" font-weight="700" fill="#12B886">rear</text>
+  <line x1="560" y1="124" x2="560" y2="144" stroke="#12B886" stroke-width="2" marker-end="url(#arrowGreen)"/>
+
+  <rect x="130" y="150" width="140" height="64" rx="10" fill="#4C8BF5"/>
+  <text x="200" y="190" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="22" font-weight="700" fill="#FFFFFF">4</text>
+  <rect x="310" y="150" width="140" height="64" rx="10" fill="#4C8BF5"/>
+  <text x="380" y="190" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="22" font-weight="700" fill="#FFFFFF">2</text>
+  <rect x="490" y="150" width="140" height="64" rx="10" fill="#4C8BF5"/>
+  <text x="560" y="190" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="22" font-weight="700" fill="#FFFFFF">7</text>
+
+  <line x1="274" y1="182" x2="306" y2="182" stroke="#1F2933" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="454" y1="182" x2="486" y2="182" stroke="#1F2933" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <line x1="114" y1="182" x2="44" y2="182" stroke="#12B886" stroke-width="2" marker-end="url(#arrowGreen)"/>
+  <text x="79" y="166" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="13" font-weight="700" fill="#12B886">dequeue()</text>
+  <line x1="706" y1="182" x2="636" y2="182" stroke="#4C8BF5" stroke-width="2" marker-end="url(#arrowBlue)"/>
+  <text x="671" y="166" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="13" font-weight="700" fill="#4C8BF5">enqueue(x)</text>
+
+  <text x="360" y="252" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="12" fill="#6B7280">Премахването става от front (началото), добавянето — от back (края).</text>
+</svg>

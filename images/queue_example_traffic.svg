@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="612" height="612" viewBox="0 0 612 612" role="img" aria-label="Коли на опашка пред светофар — първата тръгва пръв, пример от бита за опашка (FIFO)">
+  <defs>
+    <linearGradient id="roadG" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#E9ECEF"/><stop offset="1" stop-color="#D3D9DF"/></linearGradient>
+    <linearGradient id="postG" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#868E96"/><stop offset="1" stop-color="#5C6470"/></linearGradient>
+    <linearGradient id="boxG" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#343B47"/><stop offset="1" stop-color="#1F2933"/></linearGradient>
+    <linearGradient id="carGreen" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#2FD19B"/><stop offset="1" stop-color="#0CA678"/></linearGradient>
+    <linearGradient id="carBlue" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#6E9BFF"/><stop offset="1" stop-color="#4C8BF5"/></linearGradient>
+    <linearGradient id="carOrange" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FFC24D"/><stop offset="1" stop-color="#F09319"/></linearGradient>
+    <linearGradient id="glassG" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#EAF4FF"/><stop offset="1" stop-color="#C4DEFB"/></linearGradient>
+    <g id="wheel">
+      <circle cx="0" cy="0" r="21" fill="#2B323E"/>
+      <circle cx="0" cy="0" r="9" fill="#868E96"/>
+      <circle cx="0" cy="0" r="4" fill="#CED4DA"/>
+    </g>
+  </defs>
+
+  <rect x="0.5" y="0.5" width="611" height="611" rx="14" fill="#F8F9FA" stroke="#E4E7EB"/>
+
+  <!-- сцена: дъното на пътя е на y=512 (общ стил) -->
+  <g transform="translate(0 -20)">
+  <!-- път -->
+  <rect x="0" y="446" width="612" height="86" fill="url(#roadG)"/>
+  <line x1="24" y1="490" x2="588" y2="490" stroke="#FFFFFF" stroke-width="6" stroke-linecap="round" stroke-dasharray="46 34"/>
+
+  <!-- светофар: червено -->
+  <rect x="558" y="238" width="16" height="216" rx="4" fill="url(#postG)"/>
+  <rect x="534" y="122" width="64" height="130" rx="16" fill="url(#boxG)"/>
+  <circle cx="566" cy="154" r="25" fill="#E5484D" opacity="0.18"/>
+  <circle cx="566" cy="154" r="17" fill="#E5484D"/>
+  <circle cx="566" cy="190" r="17" fill="#4B5563"/>
+  <circle cx="566" cy="226" r="17" fill="#4B5563"/>
+
+  <!-- кола 3 (напред) — зелена: тръгва пръв -->
+  <g transform="translate(418 0)">
+    <ellipse cx="0" cy="444" rx="86" ry="10" fill="#94A3B8" opacity="0.4"/>
+    <path d="M-78 396 h156 a16 16 0 0 1 16 16 v14 a14 14 0 0 1 -14 14 h-150 a16 16 0 0 1 -16 -16 z" fill="url(#carGreen)"/>
+    <path d="M-44 396 l20 -40 h64 l24 40 z" fill="url(#carGreen)"/>
+    <path d="M-34 392 l16 -30 h44 l16 30 z" fill="url(#glassG)"/>
+    <rect x="-78" y="404" width="26" height="10" rx="5" fill="#FDCB6B"/>
+    <rect x="56" y="404" width="24" height="10" rx="5" fill="#FF8787"/>
+    <use href="#wheel" x="-46" y="440"/>
+    <use href="#wheel" x="50" y="440"/>
+  </g>
+
+  <!-- кола 2 -->
+  <g transform="translate(252 0)">
+    <ellipse cx="0" cy="444" rx="86" ry="10" fill="#94A3B8" opacity="0.4"/>
+    <path d="M-78 396 h156 a16 16 0 0 1 16 16 v14 a14 14 0 0 1 -14 14 h-150 a16 16 0 0 1 -16 -16 z" fill="url(#carBlue)"/>
+    <path d="M-44 396 l20 -40 h64 l24 40 z" fill="url(#carBlue)"/>
+    <path d="M-34 392 l16 -30 h44 l16 30 z" fill="url(#glassG)"/>
+    <rect x="-78" y="404" width="26" height="10" rx="5" fill="#FDCB6B"/>
+    <rect x="56" y="404" width="24" height="10" rx="5" fill="#FF8787"/>
+    <use href="#wheel" x="-46" y="440"/>
+    <use href="#wheel" x="50" y="440"/>
+  </g>
+
+  <!-- кола 1 (най-зад) -->
+  <g transform="translate(84 0)">
+    <ellipse cx="0" cy="444" rx="86" ry="10" fill="#94A3B8" opacity="0.4"/>
+    <path d="M-78 396 h156 a16 16 0 0 1 16 16 v14 a14 14 0 0 1 -14 14 h-150 a16 16 0 0 1 -16 -16 z" fill="url(#carOrange)"/>
+    <path d="M-44 396 l20 -40 h64 l24 40 z" fill="url(#carOrange)"/>
+    <path d="M-34 392 l16 -30 h44 l16 30 z" fill="url(#glassG)"/>
+    <rect x="-78" y="404" width="26" height="10" rx="5" fill="#FDCB6B"/>
+    <rect x="56" y="404" width="24" height="10" rx="5" fill="#FF8787"/>
+    <use href="#wheel" x="-46" y="440"/>
+    <use href="#wheel" x="50" y="440"/>
+  </g>
+
+  <!-- стрелка: първата тръгва -->
+  <path d="M372 336 H444" stroke="#12B886" stroke-width="7" stroke-linecap="round"/>
+  <polygon points="470,336 444,325 444,347" fill="#12B886"/>
+  <text x="408" y="308" text-anchor="middle" font-size="17" font-weight="600" fill="#12B886" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif">първата тръгва</text>
+  </g>
+
+  <text x="306" y="570" text-anchor="middle" font-size="19" font-weight="600" fill="#6B7280" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif">коли на светофар</text>
+</svg>

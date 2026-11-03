@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="612" height="612" viewBox="0 0 612 612" role="img" aria-label="Купчина палачинки — последната сложена е най-отгоре и се вади пръва, пример от бита за стек (LIFO)">
+  <defs>
+    <linearGradient id="panTop" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#FDEBBF"/><stop offset="1" stop-color="#F2CC82"/>
+    </linearGradient>
+    <linearGradient id="panSide" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#EFC276"/><stop offset="1" stop-color="#D9A04E"/>
+    </linearGradient>
+    <linearGradient id="plateG" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#FFFFFF"/><stop offset="1" stop-color="#E7ECF1"/>
+    </linearGradient>
+    <linearGradient id="syrupG" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#F2B03C"/><stop offset="1" stop-color="#D98A1B"/>
+    </linearGradient>
+    <linearGradient id="butterG" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#FFF8D8"/><stop offset="1" stop-color="#FBDF8C"/>
+    </linearGradient>
+  </defs>
+
+  <rect x="0.5" y="0.5" width="611" height="611" rx="14" fill="#F8F9FA" stroke="#E4E7EB"/>
+
+  <!-- сцена: подът е на y=512 (общ стил) -->
+  <g transform="translate(0 -8)">
+  <line x1="40" y1="520" x2="572" y2="520" stroke="#D8DCE1" stroke-width="4" stroke-linecap="round"/>
+  <ellipse cx="306" cy="518" rx="236" ry="20" fill="#E4E7EB"/>
+
+  <!-- чиния -->
+  <ellipse cx="306" cy="482" rx="218" ry="36" fill="url(#plateG)" stroke="#D8DCE1" stroke-width="4"/>
+  <ellipse cx="306" cy="480" rx="176" ry="26" fill="#F4F7FA"/>
+
+  <!-- палачинки отдолу нагоре -->
+  <ellipse cx="304" cy="465" rx="150" ry="34" fill="url(#panSide)"/>
+  <ellipse cx="304" cy="452" rx="150" ry="34" fill="url(#panTop)" stroke="#E3B36A" stroke-width="2"/>
+  <ellipse cx="298" cy="439" rx="147" ry="33" fill="url(#panSide)"/>
+  <ellipse cx="298" cy="426" rx="147" ry="33" fill="url(#panTop)" stroke="#E3B36A" stroke-width="2"/>
+  <ellipse cx="312" cy="413" rx="144" ry="33" fill="url(#panSide)"/>
+  <ellipse cx="312" cy="400" rx="144" ry="33" fill="url(#panTop)" stroke="#E3B36A" stroke-width="2"/>
+  <ellipse cx="302" cy="387" rx="141" ry="32" fill="url(#panSide)"/>
+  <ellipse cx="302" cy="374" rx="141" ry="32" fill="url(#panTop)" stroke="#E3B36A" stroke-width="2"/>
+  <ellipse cx="310" cy="361" rx="138" ry="32" fill="url(#panSide)"/>
+  <ellipse cx="310" cy="348" rx="138" ry="32" fill="url(#panTop)" stroke="#E3B36A" stroke-width="2"/>
+
+  <!-- връхът на стека — зелената граница показва, че тя се вади пръва -->
+  <ellipse cx="306" cy="335" rx="135" ry="31" fill="url(#panSide)"/>
+  <ellipse cx="306" cy="322" rx="135" ry="31" fill="url(#panTop)" stroke="#12B886" stroke-width="5"/>
+
+  <!-- сироп и краве масло -->
+  <path d="M238 312 C246 296 286 288 328 292 C368 296 392 308 386 322 C380 337 342 344 302 342 C262 340 230 330 238 312 Z" fill="url(#syrupG)"/>
+  <rect x="260" y="334" width="18" height="32" rx="9" fill="url(#syrupG)"/>
+  <rect x="356" y="332" width="14" height="28" rx="7" fill="url(#syrupG)"/>
+  <g transform="rotate(-6 308 316)">
+    <rect x="282" y="302" width="52" height="28" rx="7" fill="url(#butterG)" stroke="#F0CE72" stroke-width="3"/>
+    <rect x="288" y="306" width="38" height="9" rx="4" fill="#FFFBE8" opacity="0.9"/>
+  </g>
+
+  <!-- плодове -->
+  <path d="M236 306 c18 0 28 13 28 25 c0 13 -13 23 -28 23 c-15 0 -28 -10 -28 -23 c0 -12 10 -25 28 -25 z" fill="#E84855"/>
+  <path d="M222 308 L236 294 L250 308" fill="none" stroke="#2F9E44" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="228" cy="326" r="2.5" fill="#FFC9C9"/>
+  <circle cx="244" cy="326" r="2.5" fill="#FFC9C9"/>
+  <circle cx="236" cy="340" r="2.5" fill="#FFC9C9"/>
+  <circle cx="380" cy="320" r="17" fill="#4C6EF5"/>
+  <ellipse cx="375" cy="314" rx="6" ry="4" fill="#91A7FF" opacity="0.9"/>
+  <circle cx="382" cy="324" r="5" fill="#3B5BDB"/>
+  <circle cx="348" cy="344" r="13" fill="#4C6EF5"/>
+  <ellipse cx="344" cy="340" rx="5" ry="3" fill="#91A7FF" opacity="0.9"/>
+
+  <!-- стрелка: вадиш от върха -->
+  <path d="M516 276 V222" stroke="#12B886" stroke-width="7" stroke-linecap="round"/>
+  <polygon points="516,196 502,222 530,222" fill="#12B886"/>
+  <text x="596" y="188" text-anchor="end" font-size="17" font-weight="600" fill="#12B886" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif">вадиш отгоре</text>
+  </g>
+
+  <text x="306" y="570" text-anchor="middle" font-size="19" font-weight="600" fill="#6B7280" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif">палачинки — последната е най-отгоре</text>
+</svg>

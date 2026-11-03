@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="612" height="612" viewBox="0 0 612 612" role="img" aria-label="Вагон с врати от двата края — влизаш и излизаш и от двата края, пример от бита за дек (Deque)">
+  <defs>
+    <linearGradient id="wagonG" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#6E9BFF"/><stop offset="1" stop-color="#4C8BF5"/></linearGradient>
+    <linearGradient id="roofG" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FFFFFF"/><stop offset="1" stop-color="#E4E9EE"/></linearGradient>
+    <linearGradient id="glassG" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#EAF4FF"/><stop offset="1" stop-color="#C4DEFB"/></linearGradient>
+    <linearGradient id="skinG" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FBD7B5"/><stop offset="1" stop-color="#F0BE94"/></linearGradient>
+    <linearGradient id="gBlue" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#6E9BFF"/><stop offset="1" stop-color="#4C8BF5"/></linearGradient>
+    <linearGradient id="gGreen" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#2FD19B"/><stop offset="1" stop-color="#0CA678"/></linearGradient>
+  </defs>
+
+  <rect x="0.5" y="0.5" width="611" height="611" rx="14" fill="#F8F9FA" stroke="#E4E7EB"/>
+
+  <!-- под (общ стил): y=512 -->
+  <line x1="40" y1="512" x2="572" y2="512" stroke="#D8DCE1" stroke-width="4" stroke-linecap="round"/>
+  <ellipse cx="306" cy="508" rx="236" ry="12" fill="#E4E7EB"/>
+
+  <!-- достъп и от двата края -->
+  <text x="306" y="118" text-anchor="middle" font-size="17" font-weight="600" fill="#12B886" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif">вход и изход — и от двата края</text>
+  <path d="M150 150 H462" stroke="#12B886" stroke-width="7" stroke-linecap="round"/>
+  <polygon points="124,150 150,139 150,161" fill="#12B886"/>
+  <polygon points="488,150 462,139 462,161" fill="#12B886"/>
+
+  <!-- покрив и корпус -->
+  <rect x="76" y="176" width="460" height="24" rx="12" fill="url(#roofG)" stroke="#CED4DA" stroke-width="3"/>
+  <rect x="64" y="198" width="484" height="254" rx="24" fill="url(#wagonG)" stroke="#3B6FD4" stroke-width="4"/>
+  <rect x="64" y="330" width="484" height="16" fill="#FFFFFF" opacity="0.3"/>
+
+  <!-- прозорци -->
+  <g fill="url(#glassG)" stroke="#FFFFFF" stroke-width="4">
+    <rect x="166" y="222" width="60" height="60" rx="12"/>
+    <rect x="240" y="222" width="60" height="60" rx="12"/>
+    <rect x="314" y="222" width="60" height="60" rx="12"/>
+    <rect x="388" y="222" width="60" height="60" rx="12"/>
+  </g>
+
+  <!-- двете врати — и двете са отворени (два края на дека) -->
+  <rect x="70" y="252" width="76" height="200" rx="12" fill="#2F3A46" stroke="#12B886" stroke-width="4"/>
+  <rect x="466" y="252" width="76" height="200" rx="12" fill="#2F3A46" stroke="#12B886" stroke-width="4"/>
+
+  <!-- шаси и колела -->
+  <rect x="88" y="452" width="436" height="18" rx="6" fill="#64748B"/>
+  <g>
+    <circle cx="168" cy="486" r="26" fill="#2B323E"/>
+    <circle cx="168" cy="486" r="11" fill="#868E96"/>
+    <circle cx="168" cy="486" r="5" fill="#CED4DA"/>
+    <circle cx="444" cy="486" r="26" fill="#2B323E"/>
+    <circle cx="444" cy="486" r="11" fill="#868E96"/>
+    <circle cx="444" cy="486" r="5" fill="#CED4DA"/>
+  </g>
+
+  <!-- пътник влиза отляво -->
+  <g transform="translate(108 505)">
+    <ellipse cx="0" cy="0" rx="36" ry="9" fill="#94A3B8" opacity="0.35"/>
+    <rect x="-23" y="-64" width="19" height="64" rx="9" fill="#3B4252"/>
+    <rect x="4" y="-64" width="19" height="64" rx="9" fill="#333A49"/>
+    <rect x="-33" y="-158" width="66" height="102" rx="27" fill="url(#gBlue)"/>
+    <rect x="-33" y="-158" width="66" height="46" rx="27" fill="#FFFFFF" opacity="0.14"/>
+    <circle cx="0" cy="-186" r="27" fill="url(#skinG)"/>
+    <path d="M-27 -186 A27 27 0 0 1 27 -186 Z" fill="#4A3728"/>
+    <circle cx="-9" cy="-182" r="2.6" fill="#3B302A"/>
+    <circle cx="9" cy="-182" r="2.6" fill="#3B302A"/>
+  </g>
+
+  <!-- пътник излиза отдясно -->
+  <g transform="translate(504 505)">
+    <ellipse cx="0" cy="0" rx="36" ry="9" fill="#94A3B8" opacity="0.35"/>
+    <rect x="-23" y="-64" width="19" height="64" rx="9" fill="#3B4252"/>
+    <rect x="4" y="-64" width="19" height="64" rx="9" fill="#333A49"/>
+    <rect x="-33" y="-158" width="66" height="102" rx="27" fill="url(#gGreen)"/>
+    <rect x="-33" y="-158" width="66" height="46" rx="27" fill="#FFFFFF" opacity="0.14"/>
+    <circle cx="0" cy="-186" r="27" fill="url(#skinG)"/>
+    <path d="M-27 -186 A27 27 0 0 1 27 -186 Z" fill="#5A4636"/>
+    <circle cx="-9" cy="-182" r="2.6" fill="#3B302A"/>
+    <circle cx="9" cy="-182" r="2.6" fill="#3B302A"/>
+  </g>
+
+  <text x="306" y="570" text-anchor="middle" font-size="19" font-weight="600" fill="#6B7280" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif">вагон с врати от двата края</text>
+</svg>

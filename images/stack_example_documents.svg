@@ -1,0 +1,96 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="612" height="612" viewBox="0 0 612 612" role="img" aria-label="Купчина документи на бюро — най-новият документ е най-отгоре, пример от бита за стек (LIFO)">
+  <defs>
+    <linearGradient id="paperW" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#FFFFFF"/><stop offset="1" stop-color="#F2F5F8"/>
+    </linearGradient>
+    <linearGradient id="paperC" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#FCF5E1"/><stop offset="1" stop-color="#F3E8C8"/>
+    </linearGradient>
+    <linearGradient id="paperG" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#EAFCF5"/><stop offset="1" stop-color="#CFF3E5"/>
+    </linearGradient>
+  </defs>
+
+  <rect x="0.5" y="0.5" width="611" height="611" rx="14" fill="#F8F9FA" stroke="#E4E7EB"/>
+
+  <!-- под (общ стил): y=512 -->
+  <line x1="40" y1="512" x2="572" y2="512" stroke="#D8DCE1" stroke-width="4" stroke-linecap="round"/>
+  <ellipse cx="306" cy="508" rx="176" ry="12" fill="#E4E7EB"/>
+
+  <!-- стикер, изникнал изпод купчината -->
+  <g transform="rotate(9 482 452)">
+    <rect x="436" y="406" width="92" height="92" rx="6" fill="#FFE066" stroke="#F2C94C" stroke-width="3"/>
+    <rect x="452" y="430" width="58" height="8" rx="4" fill="#E5BE45"/>
+    <rect x="452" y="450" width="42" height="8" rx="4" fill="#E5BE45"/>
+  </g>
+
+  <!-- документи: отдолу нагоре -->
+  <g stroke-width="2.5">
+    <g transform="rotate(-1.6 306 493)">
+      <rect x="156" y="480" width="300" height="26" rx="5" fill="url(#paperW)" stroke="#D6DCE4"/>
+      <rect x="174" y="490" width="140" height="6" rx="3" fill="#C9D1DA" opacity="0.75"/>
+      <rect x="326" y="490" width="60" height="6" rx="3" fill="#C9D1DA" opacity="0.55"/>
+    </g>
+    <g transform="rotate(2 312 467)">
+      <rect x="162" y="454" width="300" height="26" rx="5" fill="url(#paperC)" stroke="#E7D8AE"/>
+      <rect x="180" y="464" width="140" height="6" rx="3" fill="#D9C99A" opacity="0.85"/>
+      <rect x="332" y="464" width="60" height="6" rx="3" fill="#D9C99A" opacity="0.65"/>
+    </g>
+    <g transform="rotate(-2.2 302 441)">
+      <rect x="152" y="428" width="300" height="26" rx="5" fill="url(#paperW)" stroke="#D6DCE4"/>
+      <rect x="170" y="438" width="140" height="6" rx="3" fill="#C9D1DA" opacity="0.75"/>
+      <rect x="322" y="438" width="60" height="6" rx="3" fill="#C9D1DA" opacity="0.55"/>
+    </g>
+    <g transform="rotate(1.6 314 415)">
+      <rect x="164" y="402" width="300" height="26" rx="5" fill="url(#paperC)" stroke="#E7D8AE"/>
+      <rect x="182" y="412" width="140" height="6" rx="3" fill="#D9C99A" opacity="0.85"/>
+      <rect x="334" y="412" width="60" height="6" rx="3" fill="#D9C99A" opacity="0.65"/>
+    </g>
+    <g transform="rotate(-1.2 304 389)">
+      <rect x="154" y="376" width="300" height="26" rx="5" fill="url(#paperW)" stroke="#D6DCE4"/>
+      <rect x="172" y="386" width="140" height="6" rx="3" fill="#C9D1DA" opacity="0.75"/>
+      <rect x="324" y="386" width="60" height="6" rx="3" fill="#C9D1DA" opacity="0.55"/>
+    </g>
+    <g transform="rotate(2.4 316 363)">
+      <rect x="166" y="350" width="300" height="26" rx="5" fill="url(#paperC)" stroke="#E7D8AE"/>
+      <rect x="184" y="360" width="140" height="6" rx="3" fill="#D9C99A" opacity="0.85"/>
+      <rect x="336" y="360" width="60" height="6" rx="3" fill="#D9C99A" opacity="0.65"/>
+    </g>
+    <g transform="rotate(-2 304 337)">
+      <rect x="154" y="324" width="300" height="26" rx="5" fill="url(#paperW)" stroke="#D6DCE4"/>
+      <rect x="172" y="334" width="140" height="6" rx="3" fill="#C9D1DA" opacity="0.75"/>
+      <rect x="324" y="334" width="60" height="6" rx="3" fill="#C9D1DA" opacity="0.55"/>
+    </g>
+    <g transform="rotate(1.2 312 311)">
+      <rect x="162" y="298" width="300" height="26" rx="5" fill="url(#paperC)" stroke="#E7D8AE"/>
+      <rect x="180" y="308" width="140" height="6" rx="3" fill="#D9C99A" opacity="0.85"/>
+      <rect x="332" y="308" width="60" height="6" rx="3" fill="#D9C99A" opacity="0.65"/>
+    </g>
+  </g>
+
+  <!-- най-новият документ (върхът на стека) — той се взема пръв -->
+  <g transform="rotate(-1.5 310 276)">
+    <rect x="158" y="248" width="304" height="56" rx="6" fill="url(#paperG)" stroke="#12B886" stroke-width="4"/>
+    <rect x="178" y="260" width="150" height="8" rx="4" fill="#57CBA4"/>
+    <rect x="178" y="276" width="234" height="8" rx="4" fill="#57CBA4" opacity="0.8"/>
+    <rect x="178" y="292" width="110" height="8" rx="4" fill="#57CBA4" opacity="0.65"/>
+  </g>
+  <!-- хартиена клипса -->
+  <path d="M212 270 v-24 a15 15 0 0 1 30 0 v38 a11 11 0 0 1 -22 0 v-32" fill="none" stroke="#4C8BF5" stroke-width="6" stroke-linecap="round" transform="rotate(-10 227 266)"/>
+
+  <!-- перо до купчината -->
+  <g transform="rotate(-5 148 495)">
+    <rect x="76" y="486" width="140" height="18" rx="9" fill="#4C8BF5"/>
+    <rect x="76" y="486" width="34" height="18" rx="9" fill="#3B6FD4"/>
+    <rect x="106" y="486" width="8" height="18" fill="#A9C7FA"/>
+    <polygon points="76,488 62,492 62,498 76,502" fill="#E9ECEF"/>
+    <polygon points="64,493 64,497 58,495" fill="#868E96"/>
+  </g>
+
+  <!-- стрелка: вземаш от върха -->
+  <path d="M520 230 V176" stroke="#12B886" stroke-width="7" stroke-linecap="round"/>
+  <polygon points="520,150 506,176 534,176" fill="#12B886"/>
+  <text x="596" y="142" text-anchor="end" font-size="17" font-weight="600" fill="#12B886" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif">вземаш отгоре</text>
+
+  <text x="306" y="570" text-anchor="middle" font-size="19" font-weight="600" fill="#6B7280" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif">нов документ = най-отгоре</text>
+</svg>
