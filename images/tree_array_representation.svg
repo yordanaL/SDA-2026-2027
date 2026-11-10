@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="420" viewBox="0 0 720 420" role="img" aria-label="Представяне на двоично дърво чрез масив">
+  <style>
+    text { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; }
+  </style>
+  <rect x="0.5" y="0.5" width="719" height="419" rx="14" fill="#F8F9FA" stroke="#E4E7EB"/>
+  <text x="360" y="34" text-anchor="middle" font-size="20" font-weight="700" fill="#1F2933">Двоично дърво чрез масив (LeetCode формат)</text>
+
+  <!-- дърво: [1,2,3,null,5,null,4] -->
+  <g stroke="#1F2933" stroke-width="2">
+    <line x1="175" y1="95" x2="105" y2="195"/>
+    <line x1="175" y1="95" x2="255" y2="195"/>
+    <line x1="105" y1="195" x2="155" y2="295"/>
+    <line x1="255" y1="195" x2="305" y2="295"/>
+  </g>
+  <g stroke="#9AA5B1" stroke-width="2" stroke-dasharray="5 5">
+    <line x1="105" y1="195" x2="55" y2="295"/>
+    <line x1="255" y1="195" x2="205" y2="295"/>
+  </g>
+  <g>
+    <circle cx="175" cy="95" r="22" fill="#4C8BF5"/>
+    <text x="175" y="102" text-anchor="middle" font-size="18" font-weight="700" fill="#FFFFFF">1</text>
+    <text x="175" y="134" text-anchor="middle" font-size="11" fill="#9AA5B1">[0]</text>
+    <circle cx="105" cy="195" r="22" fill="#4C8BF5"/>
+    <text x="105" y="202" text-anchor="middle" font-size="18" font-weight="700" fill="#FFFFFF">2</text>
+    <text x="105" y="234" text-anchor="middle" font-size="11" fill="#9AA5B1">[1]</text>
+    <circle cx="255" cy="195" r="22" fill="#4C8BF5"/>
+    <text x="255" y="202" text-anchor="middle" font-size="18" font-weight="700" fill="#FFFFFF">3</text>
+    <text x="255" y="234" text-anchor="middle" font-size="11" fill="#9AA5B1">[2]</text>
+    <circle cx="155" cy="295" r="22" fill="#4C8BF5"/>
+    <text x="155" y="302" text-anchor="middle" font-size="18" font-weight="700" fill="#FFFFFF">5</text>
+    <text x="155" y="334" text-anchor="middle" font-size="11" fill="#9AA5B1">[4]</text>
+    <circle cx="305" cy="295" r="22" fill="#4C8BF5"/>
+    <text x="305" y="302" text-anchor="middle" font-size="18" font-weight="700" fill="#FFFFFF">4</text>
+    <text x="305" y="334" text-anchor="middle" font-size="11" fill="#9AA5B1">[6]</text>
+  </g>
+  <g font-size="13" fill="#9AA5B1" text-anchor="middle">
+    <text x="55" y="300">null</text>
+    <text x="55" y="322" font-size="11">[3]</text>
+    <text x="205" y="300">null</text>
+    <text x="205" y="322" font-size="11">[5]</text>
+  </g>
+
+  <!-- масив -->
+  <text x="541" y="112" text-anchor="middle" font-size="13" font-weight="700" fill="#6B7280">масив (ниво по ниво)</text>
+  <g font-size="11" fill="#9AA5B1" text-anchor="middle">
+    <text x="394" y="142">0</text>
+    <text x="443" y="142">1</text>
+    <text x="492" y="142">2</text>
+    <text x="541" y="142">3</text>
+    <text x="590" y="142">4</text>
+    <text x="639" y="142">5</text>
+    <text x="688" y="142">6</text>
+  </g>
+  <g>
+    <rect x="372" y="150" width="44" height="44" rx="7" fill="#4C8BF5"/>
+    <text x="394" y="179" text-anchor="middle" font-size="17" font-weight="700" fill="#FFFFFF">1</text>
+    <rect x="421" y="150" width="44" height="44" rx="7" fill="#4C8BF5"/>
+    <text x="443" y="179" text-anchor="middle" font-size="17" font-weight="700" fill="#FFFFFF">2</text>
+    <rect x="470" y="150" width="44" height="44" rx="7" fill="#4C8BF5"/>
+    <text x="492" y="179" text-anchor="middle" font-size="17" font-weight="700" fill="#FFFFFF">3</text>
+    <rect x="519" y="150" width="44" height="44" rx="7" fill="#E1E5EB"/>
+    <text x="541" y="177" text-anchor="middle" font-size="12" fill="#6B7280">null</text>
+    <rect x="568" y="150" width="44" height="44" rx="7" fill="#4C8BF5"/>
+    <text x="590" y="179" text-anchor="middle" font-size="17" font-weight="700" fill="#FFFFFF">5</text>
+    <rect x="617" y="150" width="44" height="44" rx="7" fill="#E1E5EB"/>
+    <text x="639" y="177" text-anchor="middle" font-size="12" fill="#6B7280">null</text>
+    <rect x="666" y="150" width="44" height="44" rx="7" fill="#4C8BF5"/>
+    <text x="688" y="179" text-anchor="middle" font-size="17" font-weight="700" fill="#FFFFFF">4</text>
+  </g>
+
+  <text x="360" y="386" text-anchor="middle" font-size="13" fill="#1F2933">ляво дете на i → 2·i + 1   ·   дясно дете на i → 2·i + 2   ·   родител на i → (i − 1) / 2</text>
+  <text x="360" y="408" text-anchor="middle" font-size="12" fill="#6B7280">нивото k е на индекси от 2^k − 1 до 2^(k+1) − 2 · липсващ възел → null</text>
+</svg>
