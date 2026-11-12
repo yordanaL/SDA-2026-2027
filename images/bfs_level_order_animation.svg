@@ -1,64 +1,192 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="720" height="560" viewBox="0 0 720 560" role="img" aria-label="BFS обхождане в широчина (level order) — анимация">
   <style>
     text { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; }
-    .x { animation-duration: 16s; animation-iteration-count: infinite; animation-timing-function: ease-in-out; }
-    .s { opacity: 0; font-size: 20px; font-weight: 700; fill: #1F2933; }
+    .x { animation-duration: 30s; animation-iteration-count: infinite; animation-timing-function: ease-in-out; }
+    .st { opacity: 0; font-size: 20px; font-weight: 700; fill: #1F2933; }
     .ring { opacity: 0; fill: none; stroke: #F59F00; stroke-width: 4; }
+    .grn { opacity: 0; fill: none; stroke: #12B886; stroke-width: 4; }
+    .cur { opacity: 0; fill: none; stroke: #F59F00; stroke-width: 4; }
+    .bnd { opacity: 0; stroke: #F03E3E; stroke-width: 3; stroke-dasharray: 7 5; }
+    .nlv { opacity: 0; font-size: 12px; font-weight: 700; fill: #E67700; }
     .tok { opacity: 0; font-size: 22px; font-weight: 700; fill: #1F2933; }
     .lab { opacity: 0; font-size: 16px; font-weight: 700; }
-    .sA0 { animation-name: sA0; }
-    @keyframes sA0 { 0% { opacity: 0; } 0% { opacity: 0; } 1% { opacity: 1; } 12% { opacity: 1; } 14% { opacity: 0; } 100% { opacity: 0; } }
-    .sA1 { animation-name: sA1; }
-    @keyframes sA1 { 0% { opacity: 0; } 12% { opacity: 0; } 14% { opacity: 1; } 26% { opacity: 1; } 28% { opacity: 0; } 100% { opacity: 0; } }
-    .sA2 { animation-name: sA2; }
-    @keyframes sA2 { 0% { opacity: 0; } 26% { opacity: 0; } 28% { opacity: 1; } 40% { opacity: 1; } 42% { opacity: 0; } 100% { opacity: 0; } }
-    .sA3 { animation-name: sA3; }
-    @keyframes sA3 { 0% { opacity: 0; } 40% { opacity: 0; } 42% { opacity: 1; } 54% { opacity: 1; } 56% { opacity: 0; } 100% { opacity: 0; } }
-    .sA4 { animation-name: sA4; }
-    @keyframes sA4 { 0% { opacity: 0; } 54% { opacity: 0; } 56% { opacity: 1; } 68% { opacity: 1; } 70% { opacity: 0; } 100% { opacity: 0; } }
-    .sA5 { animation-name: sA5; }
-    @keyframes sA5 { 0% { opacity: 0; } 68% { opacity: 0; } 70% { opacity: 1; } 82% { opacity: 1; } 84% { opacity: 0; } 100% { opacity: 0; } }
-    .rg8 { animation-name: rg8; }
-    @keyframes rg8 { 0% { opacity: 0; } 4% { opacity: 0; } 4.5% { opacity: 1; } 12.5% { opacity: 1; } 13% { opacity: 0; } 100% { opacity: 0; } }
-    .rg3 { animation-name: rg3; }
-    @keyframes rg3 { 0% { opacity: 0; } 18% { opacity: 0; } 18.5% { opacity: 1; } 26.5% { opacity: 1; } 27% { opacity: 0; } 100% { opacity: 0; } }
-    .rg10 { animation-name: rg10; }
-    @keyframes rg10 { 0% { opacity: 0; } 32% { opacity: 0; } 32.5% { opacity: 1; } 40.5% { opacity: 1; } 41% { opacity: 0; } 100% { opacity: 0; } }
-    .rg1 { animation-name: rg1; }
-    @keyframes rg1 { 0% { opacity: 0; } 46% { opacity: 0; } 46.5% { opacity: 1; } 54.5% { opacity: 1; } 55% { opacity: 0; } 100% { opacity: 0; } }
-    .rg6 { animation-name: rg6; }
-    @keyframes rg6 { 0% { opacity: 0; } 60% { opacity: 0; } 60.5% { opacity: 1; } 68.5% { opacity: 1; } 69% { opacity: 0; } 100% { opacity: 0; } }
-    .rg14 { animation-name: rg14; }
-    @keyframes rg14 { 0% { opacity: 0; } 74% { opacity: 0; } 74.5% { opacity: 1; } 82.5% { opacity: 1; } 83% { opacity: 0; } 100% { opacity: 0; } }
+    .st00 { animation-name: st00; }
+    @keyframes st00 { 0% { opacity: 0; } 0.5% { opacity: 0; } 2.83% { opacity: 1; } 13.83% { opacity: 1; } 16.17% { opacity: 0; } 100% { opacity: 0; } }
+    .st10 { animation-name: st10; }
+    @keyframes st10 { 0% { opacity: 0; } 13.83% { opacity: 0; } 16.17% { opacity: 1; } 20.5% { opacity: 1; } 22.83% { opacity: 0; } 100% { opacity: 0; } }
+    .st11 { animation-name: st11; }
+    @keyframes st11 { 0% { opacity: 0; } 13.83% { opacity: 0; } 16.17% { opacity: 1; } 20.5% { opacity: 1; } 22.83% { opacity: 0; } 100% { opacity: 0; } }
+    .st20 { animation-name: st20; }
+    @keyframes st20 { 0% { opacity: 0; } 20.5% { opacity: 0; } 22.83% { opacity: 1; } 27.17% { opacity: 1; } 29.5% { opacity: 0; } 100% { opacity: 0; } }
+    .st21 { animation-name: st21; }
+    @keyframes st21 { 0% { opacity: 0; } 20.5% { opacity: 0; } 22.83% { opacity: 1; } 27.17% { opacity: 1; } 29.5% { opacity: 0; } 100% { opacity: 0; } }
+    .st22 { animation-name: st22; }
+    @keyframes st22 { 0% { opacity: 0; } 20.5% { opacity: 0; } 22.83% { opacity: 1; } 27.17% { opacity: 1; } 29.5% { opacity: 0; } 100% { opacity: 0; } }
+    .st30 { animation-name: st30; }
+    @keyframes st30 { 0% { opacity: 0; } 27.17% { opacity: 0; } 29.5% { opacity: 1; } 40.5% { opacity: 1; } 42.83% { opacity: 0; } 100% { opacity: 0; } }
+    .st31 { animation-name: st31; }
+    @keyframes st31 { 0% { opacity: 0; } 27.17% { opacity: 0; } 29.5% { opacity: 1; } 40.5% { opacity: 1; } 42.83% { opacity: 0; } 100% { opacity: 0; } }
+    .st40 { animation-name: st40; }
+    @keyframes st40 { 0% { opacity: 0; } 40.5% { opacity: 0; } 42.83% { opacity: 1; } 47.17% { opacity: 1; } 49.5% { opacity: 0; } 100% { opacity: 0; } }
+    .st41 { animation-name: st41; }
+    @keyframes st41 { 0% { opacity: 0; } 40.5% { opacity: 0; } 42.83% { opacity: 1; } 47.17% { opacity: 1; } 49.5% { opacity: 0; } 100% { opacity: 0; } }
+    .st42 { animation-name: st42; }
+    @keyframes st42 { 0% { opacity: 0; } 40.5% { opacity: 0; } 42.83% { opacity: 1; } 47.17% { opacity: 1; } 49.5% { opacity: 0; } 100% { opacity: 0; } }
+    .st50 { animation-name: st50; }
+    @keyframes st50 { 0% { opacity: 0; } 47.17% { opacity: 0; } 49.5% { opacity: 1; } 53.83% { opacity: 1; } 56.17% { opacity: 0; } 100% { opacity: 0; } }
+    .st51 { animation-name: st51; }
+    @keyframes st51 { 0% { opacity: 0; } 47.17% { opacity: 0; } 49.5% { opacity: 1; } 53.83% { opacity: 1; } 56.17% { opacity: 0; } 100% { opacity: 0; } }
+    .st52 { animation-name: st52; }
+    @keyframes st52 { 0% { opacity: 0; } 47.17% { opacity: 0; } 49.5% { opacity: 1; } 53.83% { opacity: 1; } 56.17% { opacity: 0; } 100% { opacity: 0; } }
+    .st53 { animation-name: st53; }
+    @keyframes st53 { 0% { opacity: 0; } 47.17% { opacity: 0; } 49.5% { opacity: 1; } 53.83% { opacity: 1; } 56.17% { opacity: 0; } 100% { opacity: 0; } }
+    .st60 { animation-name: st60; }
+    @keyframes st60 { 0% { opacity: 0; } 53.83% { opacity: 0; } 56.17% { opacity: 1; } 63.83% { opacity: 1; } 66.17% { opacity: 0; } 100% { opacity: 0; } }
+    .st61 { animation-name: st61; }
+    @keyframes st61 { 0% { opacity: 0; } 53.83% { opacity: 0; } 56.17% { opacity: 1; } 63.83% { opacity: 1; } 66.17% { opacity: 0; } 100% { opacity: 0; } }
+    .st62 { animation-name: st62; }
+    @keyframes st62 { 0% { opacity: 0; } 53.83% { opacity: 0; } 56.17% { opacity: 1; } 63.83% { opacity: 1; } 66.17% { opacity: 0; } 100% { opacity: 0; } }
+    .st70 { animation-name: st70; }
+    @keyframes st70 { 0% { opacity: 0; } 63.83% { opacity: 0; } 66.17% { opacity: 1; } 68.83% { opacity: 1; } 71.17% { opacity: 0; } 100% { opacity: 0; } }
+    .st71 { animation-name: st71; }
+    @keyframes st71 { 0% { opacity: 0; } 63.83% { opacity: 0; } 66.17% { opacity: 1; } 68.83% { opacity: 1; } 71.17% { opacity: 0; } 100% { opacity: 0; } }
+    .st72 { animation-name: st72; }
+    @keyframes st72 { 0% { opacity: 0; } 63.83% { opacity: 0; } 66.17% { opacity: 1; } 68.83% { opacity: 1; } 71.17% { opacity: 0; } 100% { opacity: 0; } }
+    .st73 { animation-name: st73; }
+    @keyframes st73 { 0% { opacity: 0; } 63.83% { opacity: 0; } 66.17% { opacity: 1; } 68.83% { opacity: 1; } 71.17% { opacity: 0; } 100% { opacity: 0; } }
+    .st80 { animation-name: st80; }
+    @keyframes st80 { 0% { opacity: 0; } 68.83% { opacity: 0; } 71.17% { opacity: 1; } 77.17% { opacity: 1; } 79.5% { opacity: 0; } 100% { opacity: 0; } }
+    .st81 { animation-name: st81; }
+    @keyframes st81 { 0% { opacity: 0; } 68.83% { opacity: 0; } 71.17% { opacity: 1; } 77.17% { opacity: 1; } 79.5% { opacity: 0; } 100% { opacity: 0; } }
+    .st82 { animation-name: st82; }
+    @keyframes st82 { 0% { opacity: 0; } 68.83% { opacity: 0; } 71.17% { opacity: 1; } 77.17% { opacity: 1; } 79.5% { opacity: 0; } 100% { opacity: 0; } }
+    .st90 { animation-name: st90; }
+    @keyframes st90 { 0% { opacity: 0; } 77.17% { opacity: 0; } 79.5% { opacity: 1; } 83.83% { opacity: 1; } 86.17% { opacity: 0; } 100% { opacity: 0; } }
+    .st91 { animation-name: st91; }
+    @keyframes st91 { 0% { opacity: 0; } 77.17% { opacity: 0; } 79.5% { opacity: 1; } 83.83% { opacity: 1; } 86.17% { opacity: 0; } 100% { opacity: 0; } }
+    .st100 { animation-name: st100; }
+    @keyframes st100 { 0% { opacity: 0; } 83.83% { opacity: 0; } 86.17% { opacity: 1; } 90.5% { opacity: 1; } 92.83% { opacity: 0; } 100% { opacity: 0; } }
+    .gn8 { animation-name: gn8; }
+    @keyframes gn8 { 0% { opacity: 0; } 1.67% { opacity: 0; } 3.33% { opacity: 1; } 6.67% { opacity: 1; } 8.33% { opacity: 0; } 100% { opacity: 0; } }
+    .gn3 { animation-name: gn3; }
+    @keyframes gn3 { 0% { opacity: 0; } 15% { opacity: 0; } 16.67% { opacity: 1; } 20% { opacity: 1; } 21.67% { opacity: 0; } 100% { opacity: 0; } }
+    .gn10 { animation-name: gn10; }
+    @keyframes gn10 { 0% { opacity: 0; } 21.67% { opacity: 0; } 23.33% { opacity: 1; } 26.67% { opacity: 1; } 28.33% { opacity: 0; } 100% { opacity: 0; } }
+    .gn1 { animation-name: gn1; }
+    @keyframes gn1 { 0% { opacity: 0; } 41.67% { opacity: 0; } 43.33% { opacity: 1; } 46.67% { opacity: 1; } 48.33% { opacity: 0; } 100% { opacity: 0; } }
+    .gn6 { animation-name: gn6; }
+    @keyframes gn6 { 0% { opacity: 0; } 48.33% { opacity: 0; } 50% { opacity: 1; } 53.33% { opacity: 1; } 55% { opacity: 0; } 100% { opacity: 0; } }
+    .gn14 { animation-name: gn14; }
+    @keyframes gn14 { 0% { opacity: 0; } 65% { opacity: 0; } 66.67% { opacity: 1; } 68.33% { opacity: 1; } 70% { opacity: 0; } 100% { opacity: 0; } }
+    .or8 { animation-name: or8; }
+    @keyframes or8 { 0% { opacity: 0; } 8.33% { opacity: 0; } 10% { opacity: 1; } 26.67% { opacity: 1; } 28.33% { opacity: 0; } 100% { opacity: 0; } }
+    .or3 { animation-name: or3; }
+    @keyframes or3 { 0% { opacity: 0; } 35% { opacity: 0; } 36.67% { opacity: 1; } 53.33% { opacity: 1; } 55% { opacity: 0; } 100% { opacity: 0; } }
+    .or10 { animation-name: or10; }
+    @keyframes or10 { 0% { opacity: 0; } 60% { opacity: 0; } 61.67% { opacity: 1; } 68.33% { opacity: 1; } 70% { opacity: 0; } 100% { opacity: 0; } }
+    .or1 { animation-name: or1; }
+    @keyframes or1 { 0% { opacity: 0; } 75% { opacity: 0; } 76.67% { opacity: 1; } 76.67% { opacity: 1; } 78.33% { opacity: 0; } 100% { opacity: 0; } }
+    .or6 { animation-name: or6; }
+    @keyframes or6 { 0% { opacity: 0; } 81.67% { opacity: 0; } 83.33% { opacity: 1; } 83.33% { opacity: 1; } 85% { opacity: 0; } 100% { opacity: 0; } }
+    .or14 { animation-name: or14; }
+    @keyframes or14 { 0% { opacity: 0; } 88.33% { opacity: 0; } 90% { opacity: 1; } 90% { opacity: 1; } 91.67% { opacity: 0; } 100% { opacity: 0; } }
+    .curcell { animation-name: curcell; }
+    @keyframes curcell { 0% { opacity: 0; } 8.33% { opacity: 0; } 9.67% { opacity: 1; } 27% { opacity: 1; } 28.33% { opacity: 0; } 35% { opacity: 0; } 36.33% { opacity: 1; } 53.67% { opacity: 1; } 55% { opacity: 0; } 60% { opacity: 0; } 61.33% { opacity: 1; } 68.67% { opacity: 1; } 70% { opacity: 0; } 75% { opacity: 0; } 76.33% { opacity: 1; } 77% { opacity: 1; } 78.33% { opacity: 0; } 81.67% { opacity: 0; } 83% { opacity: 1; } 83.67% { opacity: 1; } 85% { opacity: 0; } 88.33% { opacity: 0; } 89.67% { opacity: 1; } 90.33% { opacity: 1; } 91.67% { opacity: 0; } 100% { opacity: 0; } }
+    .bn0 { animation-name: bn0; }
+    @keyframes bn0 { 0% { opacity: 0; } 1.67% { opacity: 0; } 2.83% { opacity: 1; } 13.83% { opacity: 1; } 15% { opacity: 0; } 100% { opacity: 0; } }
+    .nv0 { animation-name: nv0; }
+    @keyframes nv0 { 0% { opacity: 0; } 1.67% { opacity: 0; } 2.83% { opacity: 1; } 13.83% { opacity: 1; } 15% { opacity: 0; } 100% { opacity: 0; } }
+    .bn1 { animation-name: bn1; }
+    @keyframes bn1 { 0% { opacity: 0; } 15% { opacity: 0; } 16.17% { opacity: 1; } 20.5% { opacity: 1; } 21.67% { opacity: 0; } 100% { opacity: 0; } }
+    .nv1 { animation-name: nv1; }
+    @keyframes nv1 { 0% { opacity: 0; } 15% { opacity: 0; } 16.17% { opacity: 1; } 20.5% { opacity: 1; } 21.67% { opacity: 0; } 100% { opacity: 0; } }
+    .bn2 { animation-name: bn2; }
+    @keyframes bn2 { 0% { opacity: 0; } 21.67% { opacity: 0; } 22.83% { opacity: 1; } 27.17% { opacity: 1; } 28.33% { opacity: 0; } 100% { opacity: 0; } }
+    .nv2 { animation-name: nv2; }
+    @keyframes nv2 { 0% { opacity: 0; } 21.67% { opacity: 0; } 22.83% { opacity: 1; } 27.17% { opacity: 1; } 28.33% { opacity: 0; } 100% { opacity: 0; } }
+    .bn3 { animation-name: bn3; }
+    @keyframes bn3 { 0% { opacity: 0; } 28.33% { opacity: 0; } 29.5% { opacity: 1; } 40.5% { opacity: 1; } 41.67% { opacity: 0; } 100% { opacity: 0; } }
+    .nv3 { animation-name: nv3; }
+    @keyframes nv3 { 0% { opacity: 0; } 28.33% { opacity: 0; } 29.5% { opacity: 1; } 40.5% { opacity: 1; } 41.67% { opacity: 0; } 100% { opacity: 0; } }
+    .bn4 { animation-name: bn4; }
+    @keyframes bn4 { 0% { opacity: 0; } 41.67% { opacity: 0; } 42.83% { opacity: 1; } 47.17% { opacity: 1; } 48.33% { opacity: 0; } 100% { opacity: 0; } }
+    .nv4 { animation-name: nv4; }
+    @keyframes nv4 { 0% { opacity: 0; } 41.67% { opacity: 0; } 42.83% { opacity: 1; } 47.17% { opacity: 1; } 48.33% { opacity: 0; } 100% { opacity: 0; } }
+    .bn5 { animation-name: bn5; }
+    @keyframes bn5 { 0% { opacity: 0; } 48.33% { opacity: 0; } 49.5% { opacity: 1; } 53.83% { opacity: 1; } 55% { opacity: 0; } 100% { opacity: 0; } }
+    .nv5 { animation-name: nv5; }
+    @keyframes nv5 { 0% { opacity: 0; } 48.33% { opacity: 0; } 49.5% { opacity: 1; } 53.83% { opacity: 1; } 55% { opacity: 0; } 100% { opacity: 0; } }
+    .bn6 { animation-name: bn6; }
+    @keyframes bn6 { 0% { opacity: 0; } 55% { opacity: 0; } 56.17% { opacity: 1; } 63.83% { opacity: 1; } 65% { opacity: 0; } 100% { opacity: 0; } }
+    .nv6 { animation-name: nv6; }
+    @keyframes nv6 { 0% { opacity: 0; } 55% { opacity: 0; } 56.17% { opacity: 1; } 63.83% { opacity: 1; } 65% { opacity: 0; } 100% { opacity: 0; } }
+    .bn7 { animation-name: bn7; }
+    @keyframes bn7 { 0% { opacity: 0; } 65% { opacity: 0; } 66.17% { opacity: 1; } 68.83% { opacity: 1; } 70% { opacity: 0; } 100% { opacity: 0; } }
+    .nv7 { animation-name: nv7; }
+    @keyframes nv7 { 0% { opacity: 0; } 65% { opacity: 0; } 66.17% { opacity: 1; } 68.83% { opacity: 1; } 70% { opacity: 0; } 100% { opacity: 0; } }
+    .bn8 { animation-name: bn8; }
+    @keyframes bn8 { 0% { opacity: 0; } 70% { opacity: 0; } 71.17% { opacity: 1; } 77.17% { opacity: 1; } 78.33% { opacity: 0; } 100% { opacity: 0; } }
+    .nv8 { animation-name: nv8; }
+    @keyframes nv8 { 0% { opacity: 0; } 70% { opacity: 0; } 71.17% { opacity: 1; } 77.17% { opacity: 1; } 78.33% { opacity: 0; } 100% { opacity: 0; } }
+    .bn9 { animation-name: bn9; }
+    @keyframes bn9 { 0% { opacity: 0; } 78.33% { opacity: 0; } 79.5% { opacity: 1; } 83.83% { opacity: 1; } 85% { opacity: 0; } 100% { opacity: 0; } }
+    .nv9 { animation-name: nv9; }
+    @keyframes nv9 { 0% { opacity: 0; } 78.33% { opacity: 0; } 79.5% { opacity: 1; } 83.83% { opacity: 1; } 85% { opacity: 0; } 100% { opacity: 0; } }
+    .bn10 { animation-name: bn10; }
+    @keyframes bn10 { 0% { opacity: 0; } 85% { opacity: 0; } 86.17% { opacity: 1; } 90.5% { opacity: 1; } 91.67% { opacity: 0; } 100% { opacity: 0; } }
+    .nv10 { animation-name: nv10; }
+    @keyframes nv10 { 0% { opacity: 0; } 85% { opacity: 0; } 86.17% { opacity: 1; } 90.5% { opacity: 1; } 91.67% { opacity: 0; } 100% { opacity: 0; } }
     .tk8 { animation-name: tk8; }
-    @keyframes tk8 { 0% { opacity: 0; } 7% { opacity: 0; } 7.7% { opacity: 1; } 96% { opacity: 1; } 98% { opacity: 0; } 100% { opacity: 0; } }
+    @keyframes tk8 { 0% { opacity: 0; } 28.33% { opacity: 0; } 30.67% { opacity: 1; } 97% { opacity: 1; } 99% { opacity: 0; } 100% { opacity: 0; } }
     .tk3 { animation-name: tk3; }
-    @keyframes tk3 { 0% { opacity: 0; } 21% { opacity: 0; } 21.7% { opacity: 1; } 96% { opacity: 1; } 98% { opacity: 0; } 100% { opacity: 0; } }
+    @keyframes tk3 { 0% { opacity: 0; } 55% { opacity: 0; } 57.33% { opacity: 1; } 97% { opacity: 1; } 99% { opacity: 0; } 100% { opacity: 0; } }
     .tk10 { animation-name: tk10; }
-    @keyframes tk10 { 0% { opacity: 0; } 35% { opacity: 0; } 35.7% { opacity: 1; } 96% { opacity: 1; } 98% { opacity: 0; } 100% { opacity: 0; } }
+    @keyframes tk10 { 0% { opacity: 0; } 70% { opacity: 0; } 72.33% { opacity: 1; } 97% { opacity: 1; } 99% { opacity: 0; } 100% { opacity: 0; } }
     .tk1 { animation-name: tk1; }
-    @keyframes tk1 { 0% { opacity: 0; } 49% { opacity: 0; } 49.7% { opacity: 1; } 96% { opacity: 1; } 98% { opacity: 0; } 100% { opacity: 0; } }
+    @keyframes tk1 { 0% { opacity: 0; } 78.33% { opacity: 0; } 80.67% { opacity: 1; } 97% { opacity: 1; } 99% { opacity: 0; } 100% { opacity: 0; } }
     .tk6 { animation-name: tk6; }
-    @keyframes tk6 { 0% { opacity: 0; } 63% { opacity: 0; } 63.7% { opacity: 1; } 96% { opacity: 1; } 98% { opacity: 0; } 100% { opacity: 0; } }
+    @keyframes tk6 { 0% { opacity: 0; } 85% { opacity: 0; } 87.33% { opacity: 1; } 97% { opacity: 1; } 99% { opacity: 0; } 100% { opacity: 0; } }
     .tk14 { animation-name: tk14; }
-    @keyframes tk14 { 0% { opacity: 0; } 77% { opacity: 0; } 77.7% { opacity: 1; } 96% { opacity: 1; } 98% { opacity: 0; } 100% { opacity: 0; } }
+    @keyframes tk14 { 0% { opacity: 0; } 91.67% { opacity: 0; } 94% { opacity: 1; } 97% { opacity: 1; } 99% { opacity: 0; } 100% { opacity: 0; } }
     .lb0 { animation-name: lb0; }
-    @keyframes lb0 { 0% { opacity: 1; } 3.5% { opacity: 0; } 100% { opacity: 0; } }
+    @keyframes lb0 { 0% { opacity: 0; } 1.67% { opacity: 0; } 3.67% { opacity: 1; } 6.33% { opacity: 1; } 8.33% { opacity: 0; } 100% { opacity: 0; } }
     .lb1 { animation-name: lb1; }
-    @keyframes lb1 { 0% { opacity: 0; } 4% { opacity: 0; } 5% { opacity: 1; } 12% { opacity: 1; } 13% { opacity: 0; } 100% { opacity: 0; } }
+    @keyframes lb1 { 0% { opacity: 0; } 8.33% { opacity: 0; } 10.33% { opacity: 1; } 13% { opacity: 1; } 15% { opacity: 0; } 100% { opacity: 0; } }
     .lb2 { animation-name: lb2; }
-    @keyframes lb2 { 0% { opacity: 0; } 18% { opacity: 0; } 19% { opacity: 1; } 26% { opacity: 1; } 27% { opacity: 0; } 100% { opacity: 0; } }
+    @keyframes lb2 { 0% { opacity: 0; } 15% { opacity: 0; } 17% { opacity: 1; } 19.67% { opacity: 1; } 21.67% { opacity: 0; } 100% { opacity: 0; } }
     .lb3 { animation-name: lb3; }
-    @keyframes lb3 { 0% { opacity: 0; } 32% { opacity: 0; } 33% { opacity: 1; } 40% { opacity: 1; } 41% { opacity: 0; } 100% { opacity: 0; } }
+    @keyframes lb3 { 0% { opacity: 0; } 21.67% { opacity: 0; } 23.67% { opacity: 1; } 26.33% { opacity: 1; } 28.33% { opacity: 0; } 100% { opacity: 0; } }
     .lb4 { animation-name: lb4; }
-    @keyframes lb4 { 0% { opacity: 0; } 46% { opacity: 0; } 47% { opacity: 1; } 54% { opacity: 1; } 55% { opacity: 0; } 100% { opacity: 0; } }
+    @keyframes lb4 { 0% { opacity: 0; } 28.33% { opacity: 0; } 30.33% { opacity: 1; } 33% { opacity: 1; } 35% { opacity: 0; } 100% { opacity: 0; } }
     .lb5 { animation-name: lb5; }
-    @keyframes lb5 { 0% { opacity: 0; } 60% { opacity: 0; } 61% { opacity: 1; } 68% { opacity: 1; } 69% { opacity: 0; } 100% { opacity: 0; } }
+    @keyframes lb5 { 0% { opacity: 0; } 35% { opacity: 0; } 37% { opacity: 1; } 39.67% { opacity: 1; } 41.67% { opacity: 0; } 100% { opacity: 0; } }
     .lb6 { animation-name: lb6; }
-    @keyframes lb6 { 0% { opacity: 0; } 74% { opacity: 0; } 75% { opacity: 1; } 95% { opacity: 1; } 96% { opacity: 0; } 100% { opacity: 0; } }
+    @keyframes lb6 { 0% { opacity: 0; } 41.67% { opacity: 0; } 43.67% { opacity: 1; } 46.33% { opacity: 1; } 48.33% { opacity: 0; } 100% { opacity: 0; } }
+    .lb7 { animation-name: lb7; }
+    @keyframes lb7 { 0% { opacity: 0; } 48.33% { opacity: 0; } 50.33% { opacity: 1; } 53% { opacity: 1; } 55% { opacity: 0; } 100% { opacity: 0; } }
+    .lb8 { animation-name: lb8; }
+    @keyframes lb8 { 0% { opacity: 0; } 55% { opacity: 0; } 57% { opacity: 1; } 58% { opacity: 1; } 60% { opacity: 0; } 100% { opacity: 0; } }
+    .lb9 { animation-name: lb9; }
+    @keyframes lb9 { 0% { opacity: 0; } 60% { opacity: 0; } 62% { opacity: 1; } 63% { opacity: 1; } 65% { opacity: 0; } 100% { opacity: 0; } }
+    .lb10 { animation-name: lb10; }
+    @keyframes lb10 { 0% { opacity: 0; } 65% { opacity: 0; } 67% { opacity: 1; } 68% { opacity: 1; } 70% { opacity: 0; } 100% { opacity: 0; } }
+    .lb11 { animation-name: lb11; }
+    @keyframes lb11 { 0% { opacity: 0; } 70% { opacity: 0; } 72% { opacity: 1; } 73% { opacity: 1; } 75% { opacity: 0; } 100% { opacity: 0; } }
+    .lb12 { animation-name: lb12; }
+    @keyframes lb12 { 0% { opacity: 0; } 75% { opacity: 0; } 77% { opacity: 1; } 76.33% { opacity: 1; } 78.33% { opacity: 0; } 100% { opacity: 0; } }
+    .lb13 { animation-name: lb13; }
+    @keyframes lb13 { 0% { opacity: 0; } 78.33% { opacity: 0; } 80.33% { opacity: 1; } 79.67% { opacity: 1; } 81.67% { opacity: 0; } 100% { opacity: 0; } }
+    .lb14 { animation-name: lb14; }
+    @keyframes lb14 { 0% { opacity: 0; } 81.67% { opacity: 0; } 83.67% { opacity: 1; } 83% { opacity: 1; } 85% { opacity: 0; } 100% { opacity: 0; } }
+    .lb15 { animation-name: lb15; }
+    @keyframes lb15 { 0% { opacity: 0; } 85% { opacity: 0; } 87% { opacity: 1; } 86.33% { opacity: 1; } 88.33% { opacity: 0; } 100% { opacity: 0; } }
+    .lb16 { animation-name: lb16; }
+    @keyframes lb16 { 0% { opacity: 0; } 88.33% { opacity: 0; } 90.33% { opacity: 1; } 89.67% { opacity: 1; } 91.67% { opacity: 0; } 100% { opacity: 0; } }
+    .lb17 { animation-name: lb17; }
+    @keyframes lb17 { 0% { opacity: 0; } 91.67% { opacity: 0; } 93.67% { opacity: 1; } 97% { opacity: 1; } 99% { opacity: 0; } 100% { opacity: 0; } }
   </style>
   <rect x="0.5" y="0.5" width="719" height="559" rx="14" fill="#F8F9FA" stroke="#E4E7EB"/>
-  <text x="360" y="34" text-anchor="middle" font-size="20" font-weight="700" fill="#1F2933">BFS / Level Order обхождане (опашка)</text>
+  <text x="360" y="34" text-anchor="middle" font-size="20" font-weight="700" fill="#1F2933">BFS / Level Order обхождане</text>
   <g stroke="#1F2933" stroke-width="2">
     <line x1="360" y1="85" x2="255" y2="175"/>
     <line x1="360" y1="85" x2="465" y2="175"/>
@@ -80,29 +208,76 @@
     <circle cx="195" cy="265" r="22" fill="#4C8BF5"/>
     <text x="195" y="272" text-anchor="middle" font-size="18" font-weight="700" fill="#FFFFFF">1</text>
   </g>
-  <circle class="x ring rg8" cx="360" cy="85" r="28"/>
-  <circle class="x ring rg3" cx="255" cy="175" r="28"/>
-  <circle class="x ring rg10" cx="465" cy="175" r="28"/>
-  <circle class="x ring rg1" cx="195" cy="265" r="28"/>
-  <circle class="x ring rg6" cx="315" cy="265" r="28"/>
-  <circle class="x ring rg14" cx="535" cy="265" r="28"/>
-  <text x="140" y="357" text-anchor="end" font-size="14" font-weight="700" fill="#1F2933">опашка:</text>
-  <rect x="150" y="330" width="56" height="42" rx="8" fill="#FFFFFF" stroke="#9AA5B1" stroke-width="2"/>
-  <rect x="212" y="330" width="56" height="42" rx="8" fill="#FFFFFF" stroke="#9AA5B1" stroke-width="2"/>
-  <rect x="274" y="330" width="56" height="42" rx="8" fill="#FFFFFF" stroke="#9AA5B1" stroke-width="2"/>
-  <text x="178" y="392" text-anchor="middle" font-size="11" fill="#9AA5B1">front</text>
-  <text class="x s sA0" x="178" y="359" text-anchor="middle">8</text>
-  <text class="x s sA1" x="178" y="359" text-anchor="middle">3</text>
-  <text class="x s sA1" x="240" y="359" text-anchor="middle">10</text>
-  <text class="x s sA2" x="178" y="359" text-anchor="middle">10</text>
-  <text class="x s sA2" x="240" y="359" text-anchor="middle">1</text>
-  <text class="x s sA2" x="302" y="359" text-anchor="middle">6</text>
-  <text class="x s sA3" x="178" y="359" text-anchor="middle">1</text>
-  <text class="x s sA3" x="240" y="359" text-anchor="middle">6</text>
-  <text class="x s sA3" x="302" y="359" text-anchor="middle">14</text>
-  <text class="x s sA4" x="178" y="359" text-anchor="middle">6</text>
-  <text class="x s sA4" x="240" y="359" text-anchor="middle">14</text>
-  <text class="x s sA5" x="178" y="359" text-anchor="middle">14</text>
+  <circle class="x grn gn8" cx="360" cy="85" r="28"/>
+  <circle class="x grn gn3" cx="255" cy="175" r="28"/>
+  <circle class="x grn gn10" cx="465" cy="175" r="28"/>
+  <circle class="x grn gn1" cx="195" cy="265" r="28"/>
+  <circle class="x grn gn6" cx="315" cy="265" r="28"/>
+  <circle class="x grn gn14" cx="535" cy="265" r="28"/>
+  <circle class="x ring or8" cx="360" cy="85" r="28"/>
+  <circle class="x ring or3" cx="255" cy="175" r="28"/>
+  <circle class="x ring or10" cx="465" cy="175" r="28"/>
+  <circle class="x ring or1" cx="195" cy="265" r="28"/>
+  <circle class="x ring or6" cx="315" cy="265" r="28"/>
+  <circle class="x ring or14" cx="535" cy="265" r="28"/>
+  <text x="100" y="357" text-anchor="end" font-size="14" font-weight="700" fill="#1F2933">опашка:</text>
+  <rect x="110" y="330" width="56" height="42" rx="8" fill="#FFFFFF" stroke="#9AA5B1" stroke-width="2"/>
+  <rect x="172" y="330" width="56" height="42" rx="8" fill="#FFFFFF" stroke="#9AA5B1" stroke-width="2"/>
+  <rect x="234" y="330" width="56" height="42" rx="8" fill="#FFFFFF" stroke="#9AA5B1" stroke-width="2"/>
+  <rect x="296" y="330" width="56" height="42" rx="8" fill="#FFFFFF" stroke="#9AA5B1" stroke-width="2"/>
+  <rect x="358" y="330" width="56" height="42" rx="8" fill="#FFFFFF" stroke="#9AA5B1" stroke-width="2"/>
+  <rect class="x cur curcell" x="110" y="330" width="56" height="42" rx="8"/>
+  <line class="x bnd bn0" x1="166" y1="318" x2="166" y2="388"/>
+  <line class="x bnd bn1" x1="166" y1="318" x2="166" y2="388"/>
+  <line class="x bnd bn2" x1="166" y1="318" x2="166" y2="388"/>
+  <line class="x bnd bn3" x1="228" y1="318" x2="228" y2="388"/>
+  <line class="x bnd bn4" x1="228" y1="318" x2="228" y2="388"/>
+  <line class="x bnd bn5" x1="228" y1="318" x2="228" y2="388"/>
+  <line class="x bnd bn6" x1="166" y1="318" x2="166" y2="388"/>
+  <line class="x bnd bn7" x1="166" y1="318" x2="166" y2="388"/>
+  <line class="x bnd bn8" x1="290" y1="318" x2="290" y2="388"/>
+  <line class="x bnd bn9" x1="228" y1="318" x2="228" y2="388"/>
+  <line class="x bnd bn10" x1="166" y1="318" x2="166" y2="388"/>
+  <text class="x nlv nv0" x="136" y="314" text-anchor="middle">текущо ниво</text>
+  <text class="x nlv nv1" x="136" y="314" text-anchor="middle">текущо ниво</text>
+  <text class="x nlv nv2" x="136" y="314" text-anchor="middle">текущо ниво</text>
+  <text class="x nlv nv3" x="167" y="314" text-anchor="middle">текущо ниво</text>
+  <text class="x nlv nv4" x="167" y="314" text-anchor="middle">текущо ниво</text>
+  <text class="x nlv nv5" x="167" y="314" text-anchor="middle">текущо ниво</text>
+  <text class="x nlv nv6" x="136" y="314" text-anchor="middle">текущо ниво</text>
+  <text class="x nlv nv7" x="136" y="314" text-anchor="middle">текущо ниво</text>
+  <text class="x nlv nv8" x="198" y="314" text-anchor="middle">текущо ниво</text>
+  <text class="x nlv nv9" x="167" y="314" text-anchor="middle">текущо ниво</text>
+  <text class="x nlv nv10" x="136" y="314" text-anchor="middle">текущо ниво</text>
+  <text class="x st st00" x="138" y="359" text-anchor="middle">8</text>
+  <text class="x st st10" x="138" y="359" text-anchor="middle">8</text>
+  <text class="x st st11" x="200" y="359" text-anchor="middle">3</text>
+  <text class="x st st20" x="138" y="359" text-anchor="middle">8</text>
+  <text class="x st st21" x="200" y="359" text-anchor="middle">3</text>
+  <text class="x st st22" x="262" y="359" text-anchor="middle">10</text>
+  <text class="x st st30" x="138" y="359" text-anchor="middle">3</text>
+  <text class="x st st31" x="200" y="359" text-anchor="middle">10</text>
+  <text class="x st st40" x="138" y="359" text-anchor="middle">3</text>
+  <text class="x st st41" x="200" y="359" text-anchor="middle">10</text>
+  <text class="x st st42" x="262" y="359" text-anchor="middle">1</text>
+  <text class="x st st50" x="138" y="359" text-anchor="middle">3</text>
+  <text class="x st st51" x="200" y="359" text-anchor="middle">10</text>
+  <text class="x st st52" x="262" y="359" text-anchor="middle">1</text>
+  <text class="x st st53" x="324" y="359" text-anchor="middle">6</text>
+  <text class="x st st60" x="138" y="359" text-anchor="middle">10</text>
+  <text class="x st st61" x="200" y="359" text-anchor="middle">1</text>
+  <text class="x st st62" x="262" y="359" text-anchor="middle">6</text>
+  <text class="x st st70" x="138" y="359" text-anchor="middle">10</text>
+  <text class="x st st71" x="200" y="359" text-anchor="middle">1</text>
+  <text class="x st st72" x="262" y="359" text-anchor="middle">6</text>
+  <text class="x st st73" x="324" y="359" text-anchor="middle">14</text>
+  <text class="x st st80" x="138" y="359" text-anchor="middle">1</text>
+  <text class="x st st81" x="200" y="359" text-anchor="middle">6</text>
+  <text class="x st st82" x="262" y="359" text-anchor="middle">14</text>
+  <text class="x st st90" x="138" y="359" text-anchor="middle">6</text>
+  <text class="x st st91" x="200" y="359" text-anchor="middle">14</text>
+  <text class="x st st100" x="138" y="359" text-anchor="middle">14</text>
+  <text x="138" y="392" text-anchor="middle" font-size="11" fill="#9AA5B1">front</text>
   <text x="160" y="452" text-anchor="end" font-size="14" font-weight="700" fill="#1F2933">изход:</text>
   <text class="x tok tk8" x="185" y="452" text-anchor="middle">8</text>
   <text class="x tok tk3" x="255" y="452" text-anchor="middle">3</text>
@@ -110,12 +285,23 @@
   <text class="x tok tk1" x="395" y="452" text-anchor="middle">1</text>
   <text class="x tok tk6" x="465" y="452" text-anchor="middle">6</text>
   <text class="x tok tk14" x="535" y="452" text-anchor="middle">14</text>
-  <text class="x lab lb0" x="360" y="500" text-anchor="middle" fill="#4C8BF5">започваме от корена</text>
-  <text class="x lab lb1" x="360" y="500" text-anchor="middle" fill="#F03E3E">pop() → 8;  push(3), push(10)</text>
-  <text class="x lab lb2" x="360" y="500" text-anchor="middle" fill="#F03E3E">pop() → 3;  push(1), push(6)</text>
-  <text class="x lab lb3" x="360" y="500" text-anchor="middle" fill="#F03E3E">pop() → 10;  push(14)</text>
-  <text class="x lab lb4" x="360" y="500" text-anchor="middle" fill="#F03E3E">pop() → 1</text>
-  <text class="x lab lb5" x="360" y="500" text-anchor="middle" fill="#F03E3E">pop() → 6</text>
-  <text class="x lab lb6" x="360" y="500" text-anchor="middle" fill="#12B886">pop() → 14; опашката е празна — готово!</text>
-  <text x="360" y="535" text-anchor="middle" font-size="12" fill="#6B7280">Level order обхожда възлите ниво по ниво, като пази децата за следващото ниво в опашка.</text>
+  <text class="x lab lb0" x="360" y="500" text-anchor="middle" fill="#4C8BF5">започваме от корена — 8 е в опашката</text>
+  <text class="x lab lb1" x="360" y="500" text-anchor="middle" fill="#E67700">обработваме 8 (front на опашката)</text>
+  <text class="x lab lb2" x="360" y="500" text-anchor="middle" fill="#F03E3E">push(3) — лявото дете влиза в опашката</text>
+  <text class="x lab lb3" x="360" y="500" text-anchor="middle" fill="#F03E3E">push(10) — дясното дете влиза в опашката</text>
+  <text class="x lab lb4" x="360" y="500" text-anchor="middle" fill="#F03E3E">pop() → 8;  изход: 8</text>
+  <text class="x lab lb5" x="360" y="500" text-anchor="middle" fill="#E67700">обработваме 3 (front на опашката)</text>
+  <text class="x lab lb6" x="360" y="500" text-anchor="middle" fill="#F03E3E">push(1) — ляво дете на 3</text>
+  <text class="x lab lb7" x="360" y="500" text-anchor="middle" fill="#F03E3E">push(6) — дясно дете на 3</text>
+  <text class="x lab lb8" x="360" y="500" text-anchor="middle" fill="#F03E3E">pop() → 3;  изход: 3</text>
+  <text class="x lab lb9" x="360" y="500" text-anchor="middle" fill="#E67700">обработваме 10 (front)</text>
+  <text class="x lab lb10" x="360" y="500" text-anchor="middle" fill="#F03E3E">push(14) — дясно дете на 10</text>
+  <text class="x lab lb11" x="360" y="500" text-anchor="middle" fill="#F03E3E">pop() → 10;  изход: 10</text>
+  <text class="x lab lb12" x="360" y="500" text-anchor="middle" fill="#E67700">обработваме 1 — листо, няма деца</text>
+  <text class="x lab lb13" x="360" y="500" text-anchor="middle" fill="#F03E3E">pop() → 1;  изход: 1</text>
+  <text class="x lab lb14" x="360" y="500" text-anchor="middle" fill="#E67700">обработваме 6 — листо</text>
+  <text class="x lab lb15" x="360" y="500" text-anchor="middle" fill="#F03E3E">pop() → 6;  изход: 6</text>
+  <text class="x lab lb16" x="360" y="500" text-anchor="middle" fill="#E67700">обработваме 14 — листо</text>
+  <text class="x lab lb17" x="360" y="500" text-anchor="middle" fill="#12B886">pop() → 14; опашката е празна — готово!</text>
+  <text x="360" y="535" text-anchor="middle" font-size="12" fill="#6B7280">Level order обхожда възлите ниво по ниво, а опашката пази децата за следващото ниво.</text>
 </svg>
