@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="470" viewBox="0 0 720 470" role="img" aria-label="Separate chaining — списък във всяка клетка">
+  <style>
+    text { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; }
+  </style>
+  <defs>
+    <marker id="aD" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#1F2933"/>
+    </marker>
+  </defs>
+  <rect x="0.5" y="0.5" width="719" height="469" rx="14" fill="#F8F9FA" stroke="#E4E7EB"/>
+  <text x="360" y="40" text-anchor="middle" font-size="20" font-weight="700" fill="#1F2933">Separate chaining — по няколко стойности в една клетка</text>
+  <text x="360" y="66" text-anchor="middle" font-size="14" fill="#6B7280">Всяка клетка пази списък с добавените двойки; търсим само в списъка на хешираната клетка</text>
+
+  <text x="100" y="147" text-anchor="end" font-size="13" font-weight="700" fill="#1F2933">0</text>
+  <rect x="110" y="110" width="130" height="64" rx="10" fill="#E1E5EB" stroke="#1F2933" stroke-width="2"/>
+  <text x="255" y="146" font-size="13" fill="#9AA5B1">nullptr</text>
+
+  <text x="100" y="233" text-anchor="end" font-size="13" font-weight="700" fill="#1F2933">1</text>
+  <rect x="110" y="196" width="130" height="64" rx="10" fill="#E1E5EB" stroke="#1F2933" stroke-width="2"/>
+  <line x1="240" y1="228" x2="306" y2="228" stroke="#1F2933" stroke-width="2" marker-end="url(#aD)"/>
+  <rect x="310" y="201" width="110" height="54" rx="10" fill="#4C8BF5"/>
+  <text x="365" y="228" text-anchor="middle" font-size="17" font-weight="700" fill="#FFFFFF">12</text>
+  <text x="365" y="247" text-anchor="middle" font-size="12" fill="#DCEBFF">стойност 5</text>
+  <line x1="420" y1="228" x2="446" y2="228" stroke="#1F2933" stroke-width="2" marker-end="url(#aD)"/>
+  <rect x="450" y="201" width="110" height="54" rx="10" fill="#4C8BF5"/>
+  <text x="505" y="228" text-anchor="middle" font-size="17" font-weight="700" fill="#FFFFFF">21</text>
+  <text x="505" y="247" text-anchor="middle" font-size="12" fill="#DCEBFF">стойност 8</text>
+
+  <text x="100" y="319" text-anchor="end" font-size="13" font-weight="700" fill="#1F2933">2</text>
+  <rect x="110" y="282" width="130" height="64" rx="10" fill="#E1E5EB" stroke="#1F2933" stroke-width="2"/>
+  <text x="255" y="318" font-size="13" fill="#9AA5B1">nullptr</text>
+
+  <text x="100" y="405" text-anchor="end" font-size="13" font-weight="700" fill="#1F2933">3</text>
+  <rect x="110" y="368" width="130" height="64" rx="10" fill="#E1E5EB" stroke="#1F2933" stroke-width="2"/>
+  <line x1="240" y1="400" x2="306" y2="400" stroke="#1F2933" stroke-width="2" marker-end="url(#aD)"/>
+  <rect x="310" y="373" width="110" height="54" rx="10" fill="#4C8BF5"/>
+  <text x="365" y="400" text-anchor="middle" font-size="17" font-weight="700" fill="#FFFFFF">7</text>
+  <text x="365" y="419" text-anchor="middle" font-size="12" fill="#DCEBFF">стойност 3</text>
+  <line x1="420" y1="400" x2="446" y2="400" stroke="#1F2933" stroke-width="2" marker-end="url(#aD)"/>
+  <rect x="450" y="373" width="110" height="54" rx="10" fill="#4C8BF5"/>
+  <text x="505" y="400" text-anchor="middle" font-size="17" font-weight="700" fill="#FFFFFF">33</text>
+  <text x="505" y="419" text-anchor="middle" font-size="12" fill="#DCEBFF">стойност 1</text>
+  <line x1="560" y1="400" x2="586" y2="400" stroke="#1F2933" stroke-width="2" marker-end="url(#aD)"/>
+  <rect x="590" y="373" width="110" height="54" rx="10" fill="#4C8BF5"/>
+  <text x="645" y="400" text-anchor="middle" font-size="17" font-weight="700" fill="#FFFFFF">54</text>
+  <text x="645" y="419" text-anchor="middle" font-size="12" fill="#DCEBFF">стойност 9</text>
+
+  <text x="360" y="456" text-anchor="middle" font-size="13" fill="#6B7280">h(12) = 1 → обхождаме само списъка на клетка 1 — O(дължина на списъка)</text>
+</svg>

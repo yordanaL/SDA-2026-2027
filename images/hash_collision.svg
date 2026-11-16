@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="380" viewBox="0 0 720 380" role="img" aria-label="Колизии — два обекта с един и същи хеш">
+  <style>
+    text { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; }
+  </style>
+  <defs>
+    <marker id="aD" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#1F2933"/>
+    </marker>
+    <marker id="aB" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4C8BF5"/>
+    </marker>
+    <marker id="aR" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#F03E3E"/>
+    </marker>
+  </defs>
+
+  <rect x="0.5" y="0.5" width="719" height="379" rx="14" fill="#F8F9FA" stroke="#E4E7EB"/>
+  <text x="360" y="40" text-anchor="middle" font-size="20" font-weight="700" fill="#1F2933">Колизии (collisions)</text>
+  <text x="360" y="66" text-anchor="middle" font-size="14" fill="#6B7280">Два различни обекта с една и съща хеш стойност: h(k1) = h(k2)</text>
+
+  <!-- ключове (ляво) -->
+  <text x="110" y="120" text-anchor="middle" font-size="13" font-weight="700" fill="#6B7280">ключ k1</text>
+  <rect x="50" y="130" width="120" height="56" rx="10" fill="#4C8BF5"/>
+  <text x="110" y="165" text-anchor="middle" font-size="20" font-weight="700" fill="#FFFFFF">Pesho</text>
+
+  <text x="110" y="250" text-anchor="middle" font-size="13" font-weight="700" fill="#6B7280">ключ k2</text>
+  <rect x="50" y="260" width="120" height="56" rx="10" fill="#4C8BF5"/>
+  <text x="110" y="295" text-anchor="middle" font-size="20" font-weight="700" fill="#FFFFFF">Gosho</text>
+
+  <!-- хеш функция (център) -->
+  <rect x="280" y="160" width="160" height="130" rx="14" fill="#FFFFFF" stroke="#1F2933" stroke-width="2.5"/>
+  <text x="360" y="200" text-anchor="middle" font-size="22" font-weight="700" fill="#1F2933">h(k)</text>
+  <line x1="305" y1="218" x2="415" y2="218" stroke="#E4E7EB" stroke-width="2"/>
+  <text x="360" y="250" text-anchor="middle" font-size="14" fill="#6B7280">хеш функция</text>
+  <text x="360" y="274" text-anchor="middle" font-size="14" font-weight="700" fill="#4C8BF5">→ 3</text>
+
+  <!-- клетка (дясно) -->
+  <rect x="540" y="170" width="140" height="110" rx="10" fill="#FDECEC" stroke="#F03E3E" stroke-width="2.5"/>
+  <text x="610" y="208" text-anchor="middle" font-size="17" font-weight="700" fill="#F03E3E">клетка 3</text>
+  <line x1="562" y1="224" x2="658" y2="224" stroke="#F03E3E" stroke-width="1.5" opacity="0.5"/>
+  <text x="610" y="252" text-anchor="middle" font-size="16" font-weight="700" fill="#1F2933">Pesho?</text>
+  <text x="610" y="274" text-anchor="middle" font-size="16" font-weight="700" fill="#F03E3E">Gosho?</text>
+
+  <!-- стрелки: ключове → хеш функция -->
+  <path d="M176 158 L274 196" stroke="#4C8BF5" stroke-width="2.5" marker-end="url(#aB)"/>
+  <path d="M176 288 L274 254" stroke="#4C8BF5" stroke-width="2.5" marker-end="url(#aB)"/>
+
+  <!-- стрелка: хеш функция → клетка -->
+  <path d="M446 225 L534 225" stroke="#F03E3E" stroke-width="3" marker-end="url(#aR)"/>
+  <text x="490" y="212" text-anchor="middle" font-size="15" font-weight="700" fill="#F03E3E">и двете = 3!</text>
+
+  <text x="360" y="352" text-anchor="middle" font-size="13" fill="#6B7280">Колизията е неизбежна — въпросът е как я разрешаваме (chaining / probing)</text>
+</svg>

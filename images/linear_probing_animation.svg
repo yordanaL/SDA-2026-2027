@@ -1,0 +1,109 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="380" viewBox="0 0 720 380" role="img" aria-label="Linear probing — анимация: търсене на свободна клетка">
+  <style>
+    text { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; }
+    .fx { opacity: 0; animation-duration: 18s; animation-timing-function: step-end; animation-iteration-count: infinite; }
+    .p3 { animation-name: p3; }
+    .p4 { animation-name: p4; }
+    .p5 { animation-name: p5; }
+    .r3 { animation-name: r3; }
+    .r4 { animation-name: r4; }
+    .g5 { animation-name: g5; }
+    .l1 { animation-name: l1; }
+    .l2 { animation-name: l2; }
+    .l3 { animation-name: l3; }
+    .l4 { animation-name: l4; }
+    .fly18 { animation: fly18 18s infinite; }
+    @keyframes p3 { 0% { opacity: 1; } 7% { opacity: 1; } 8% { opacity: 0; } 92% { opacity: 0; } 93% { opacity: 1; } 100% { opacity: 1; } }
+    @keyframes p4 { 0% { opacity: 0; } 8% { opacity: 1; } 15% { opacity: 1; } 16% { opacity: 0; } 92% { opacity: 0; } 93% { opacity: 0; } 100% { opacity: 0; } }
+    @keyframes p5 { 0% { opacity: 0; } 16% { opacity: 1; } 92% { opacity: 1; } 93% { opacity: 0; } 100% { opacity: 0; } }
+    @keyframes r3 { 0% { opacity: 1; } 7% { opacity: 1; } 8% { opacity: 0; } 92% { opacity: 0; } 93% { opacity: 1; } 100% { opacity: 1; } }
+    @keyframes r4 { 0% { opacity: 0; } 8% { opacity: 1; } 15% { opacity: 1; } 16% { opacity: 0; } 92% { opacity: 0; } 93% { opacity: 0; } 100% { opacity: 0; } }
+    @keyframes g5 { 0% { opacity: 0; } 16% { opacity: 1; } 92% { opacity: 1; } 93% { opacity: 0; } 100% { opacity: 0; } }
+    @keyframes l1 { 0% { opacity: 1; } 7% { opacity: 1; } 8% { opacity: 0; } 92% { opacity: 0; } 93% { opacity: 1; } 100% { opacity: 1; } }
+    @keyframes l2 { 0% { opacity: 0; } 8% { opacity: 1; } 15% { opacity: 1; } 16% { opacity: 0; } 92% { opacity: 0; } 93% { opacity: 0; } 100% { opacity: 0; } }
+    @keyframes l3 { 0% { opacity: 0; } 16% { opacity: 1; } 24% { opacity: 1; } 25% { opacity: 0; } 92% { opacity: 0; } 93% { opacity: 0; } 100% { opacity: 0; } }
+    @keyframes l4 { 0% { opacity: 0; } 27% { opacity: 1; } 90% { opacity: 0; } 100% { opacity: 0; } }
+    @keyframes fly18 {
+      0% { transform: translateY(-120px); opacity: 0; animation-timing-function: step-end; }
+      16% { transform: translateY(-120px); opacity: 0; animation-timing-function: step-end; }
+      17% { transform: translateY(-120px); opacity: 1; animation-timing-function: ease-in-out; }
+      25% { transform: translateY(0); opacity: 1; animation-timing-function: step-end; }
+      92% { transform: translateY(0); opacity: 1; animation-timing-function: step-end; }
+      93% { transform: translateY(0); opacity: 0; animation-timing-function: step-end; }
+      99% { transform: translateY(-120px); opacity: 0; animation-timing-function: step-end; }
+      100% { transform: translateY(-120px); opacity: 1; }
+    }
+  </style>
+  <defs>
+    <marker id="aD" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#1F2933"/>
+    </marker>
+  </defs>
+
+  <rect x="0.5" y="0.5" width="719" height="379" rx="14" fill="#F8F9FA" stroke="#E4E7EB"/>
+  <text x="360" y="40" text-anchor="middle" font-size="20" font-weight="700" fill="#1F2933">Linear probing — търсене на свободна клетка</text>
+  <text x="360" y="66" text-anchor="middle" font-size="14" fill="#6B7280">Колизия → проверяваме следващата клетка, докато намерим празна</text>
+
+  <!-- клетки (индекси 0..5) -->
+  <text x="135" y="122" text-anchor="middle" font-size="13" font-weight="700" fill="#6B7280">0</text>
+  <rect x="90" y="132" width="90" height="56" rx="10" fill="#E1E5EB" stroke="#1F2933" stroke-width="2"/>
+  <text x="235" y="122" text-anchor="middle" font-size="13" font-weight="700" fill="#6B7280">1</text>
+  <rect x="190" y="132" width="90" height="56" rx="10" fill="#E1E5EB" stroke="#1F2933" stroke-width="2"/>
+  <text x="335" y="122" text-anchor="middle" font-size="13" font-weight="700" fill="#6B7280">2</text>
+  <rect x="290" y="132" width="90" height="56" rx="10" fill="#E1E5EB" stroke="#1F2933" stroke-width="2"/>
+  <text x="435" y="122" text-anchor="middle" font-size="13" font-weight="700" fill="#6B7280">3</text>
+  <rect x="390" y="132" width="90" height="56" rx="10" fill="#E1E5EB" stroke="#1F2933" stroke-width="2"/>
+  <text x="535" y="122" text-anchor="middle" font-size="13" font-weight="700" fill="#6B7280">4</text>
+  <rect x="490" y="132" width="90" height="56" rx="10" fill="#E1E5EB" stroke="#1F2933" stroke-width="2"/>
+  <text x="635" y="122" text-anchor="middle" font-size="13" font-weight="700" fill="#6B7280">5</text>
+  <rect x="590" y="132" width="90" height="56" rx="10" fill="#E1E5EB" stroke="#1F2933" stroke-width="2"/>
+
+  <!-- заети клетки в началото -->
+  <rect x="392" y="134" width="86" height="52" rx="8" fill="#4C8BF5"/>
+  <text x="435" y="167" text-anchor="middle" font-size="18" font-weight="700" fill="#FFFFFF">10</text>
+  <rect x="492" y="134" width="86" height="52" rx="8" fill="#4C8BF5"/>
+  <text x="535" y="167" text-anchor="middle" font-size="18" font-weight="700" fill="#FFFFFF">25</text>
+
+  <!-- подсветка на празната клетка 5 -->
+  <g class="fx g5">
+    <rect x="588" y="130" width="94" height="60" rx="11" fill="#12B886" opacity="0.16"/>
+    <rect x="588" y="130" width="94" height="60" rx="11" fill="none" stroke="#12B886" stroke-width="3"/>
+  </g>
+
+  <!-- пръстен при заета клетка -->
+  <g class="fx r3">
+    <rect x="386" y="128" width="98" height="64" rx="12" fill="none" stroke="#F03E3E" stroke-width="3"/>
+  </g>
+  <g class="fx r4">
+    <rect x="486" y="128" width="98" height="64" rx="12" fill="none" stroke="#F03E3E" stroke-width="3"/>
+  </g>
+
+  <!-- пръстен-указател над текущата клетка -->
+  <g class="fx p3">
+    <path d="M435,104 L428,90 L442,90 Z" fill="#1F2933"/>
+    <line x1="435" y1="90" x2="435" y2="76" stroke="#1F2933" stroke-width="2"/>
+  </g>
+  <g class="fx p4">
+    <path d="M535,104 L528,90 L542,90 Z" fill="#1F2933"/>
+    <line x1="535" y1="90" x2="535" y2="76" stroke="#1F2933" stroke-width="2"/>
+  </g>
+  <g class="fx p5">
+    <path d="M635,104 L628,90 L642,90 Z" fill="#12B886"/>
+    <line x1="635" y1="90" x2="635" y2="76" stroke="#12B886" stroke-width="2"/>
+  </g>
+
+  <!-- летящ ключ 18 -->
+  <g class="fly18">
+    <rect x="592" y="134" width="86" height="52" rx="8" fill="#12B886"/>
+    <text x="635" y="167" text-anchor="middle" font-size="18" font-weight="700" fill="#FFFFFF">18</text>
+  </g>
+
+  <!-- статус -->
+  <text class="fx l1" x="360" y="290" text-anchor="middle" font-size="15" font-weight="700" fill="#4C8BF5">insert(18): h(18) = 3 → клетка 3</text>
+  <text class="fx l2" x="360" y="290" text-anchor="middle" font-size="15" font-weight="700" fill="#F03E3E">клетка 3 е заета (10) → пробираме 4</text>
+  <text class="fx l3" x="360" y="290" text-anchor="middle" font-size="15" font-weight="700" fill="#F03E3E">клетка 4 също е заета (25) → пробираме 5</text>
+  <text class="fx l4" x="360" y="290" text-anchor="middle" font-size="15" font-weight="700" fill="#12B886">клетка 5 е празна → записваме 18 там</text>
+
+  <!-- пример за търсене -->
+  <text class="fx l4" x="360" y="330" text-anchor="middle" font-size="13" fill="#6B7280">search(18) също обхожда 3 → 4 → 5, докато намери ключа</text>
+</svg>

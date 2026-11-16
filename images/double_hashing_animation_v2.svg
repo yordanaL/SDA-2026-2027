@@ -1,0 +1,161 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="350" viewBox="0 0 720 350" role="img" aria-label="Double hashing — анимация: скок с втора хеш функция">
+  <style>
+    text { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; }
+    .fx { opacity: 0; animation-duration: 16s; animation-timing-function: step-end; animation-iteration-count: infinite; }
+    .l1 { animation-name: l1; }
+    .l2 { animation-name: l2; }
+    .l3 { animation-name: l3; }
+    .l4 { animation-name: l4; }
+    .r1 { animation-name: r1; }
+    .r3 { animation-name: r3; }
+    .g5 { animation-name: g5; }
+    .k18 { animation: k18 16s step-end infinite; }
+    .jump1 { animation: jump1 16s step-end infinite; }
+    .jump2 { animation: jump2 16s step-end infinite; }
+    @keyframes l1 {
+      0% { opacity: 1; }
+      13% { opacity: 1; animation-timing-function: ease-out; }
+      15% { opacity: 0; }
+      87% { opacity: 0; animation-timing-function: ease-out; }
+      89% { opacity: 1; }
+      100% { opacity: 1; }
+    }
+    @keyframes l2 {
+      0% { opacity: 0; }
+      16% { opacity: 0; animation-timing-function: ease-out; }
+      18% { opacity: 1; }
+      28% { opacity: 1; animation-timing-function: ease-out; }
+      30% { opacity: 0; }
+      100% { opacity: 0; }
+    }
+    @keyframes l3 {
+      0% { opacity: 0; }
+      30% { opacity: 0; animation-timing-function: ease-out; }
+      32% { opacity: 1; }
+      42% { opacity: 1; animation-timing-function: ease-out; }
+      44% { opacity: 0; }
+      100% { opacity: 0; }
+    }
+    @keyframes l4 {
+      0% { opacity: 0; }
+      44% { opacity: 0; animation-timing-function: ease-out; }
+      46% { opacity: 1; }
+      80% { opacity: 1; animation-timing-function: ease-out; }
+      83% { opacity: 0; }
+      100% { opacity: 0; }
+    }
+    @keyframes r1 {
+      0% { opacity: 0; }
+      4% { opacity: 1; }
+      16% { opacity: 1; animation-timing-function: ease-out; }
+      18% { opacity: 0; }
+      100% { opacity: 0; }
+    }
+    @keyframes r3 {
+      0% { opacity: 0; }
+      21% { opacity: 1; }
+      32% { opacity: 1; animation-timing-function: ease-out; }
+      34% { opacity: 0; }
+      100% { opacity: 0; }
+    }
+    @keyframes g5 {
+      0% { opacity: 0; }
+      44% { opacity: 0; animation-timing-function: ease-out; }
+      46% { opacity: 1; }
+      80% { opacity: 1; animation-timing-function: ease-out; }
+      83% { opacity: 0; }
+      100% { opacity: 0; }
+    }
+    @keyframes jump1 {
+      0% { opacity: 0; stroke-dashoffset: 0; animation-timing-function: step-end; }
+      18% { opacity: 1; stroke-dashoffset: 0; animation-timing-function: linear; }
+      80% { opacity: 1; stroke-dashoffset: -56; animation-timing-function: step-end; }
+      83% { opacity: 0; stroke-dashoffset: -56; }
+      100% { opacity: 0; stroke-dashoffset: 0; }
+    }
+    @keyframes jump2 {
+      0% { opacity: 0; stroke-dashoffset: 0; animation-timing-function: step-end; }
+      34% { opacity: 1; stroke-dashoffset: 0; animation-timing-function: linear; }
+      80% { opacity: 1; stroke-dashoffset: -56; animation-timing-function: step-end; }
+      83% { opacity: 0; stroke-dashoffset: -56; }
+      100% { opacity: 0; stroke-dashoffset: 0; }
+    }
+    @keyframes k18 {
+      0% { transform: translate(-400px,-84px); opacity: 0; }
+      4% { transform: translate(-400px,-84px); opacity: 1; }
+      18% { transform: translate(-400px,-84px); opacity: 1; animation-timing-function: ease-in-out; }
+      21% { transform: translate(-200px,-84px); opacity: 1; }
+      34% { transform: translate(-200px,-84px); opacity: 1; animation-timing-function: ease-in-out; }
+      37% { transform: translate(0,-84px); opacity: 1; }
+      46% { transform: translate(0,-84px); opacity: 1; animation-timing-function: ease-in-out; }
+      50% { transform: translate(0,0); opacity: 1; }
+      80% { transform: translate(0,0); opacity: 1; animation-timing-function: ease-out; }
+      83% { transform: translate(0,0); opacity: 0; }
+      87% { transform: translate(-400px,-84px); opacity: 0; animation-timing-function: ease-out; }
+      89% { transform: translate(-400px,-84px); opacity: 1; }
+      100% { transform: translate(-400px,-84px); opacity: 1; }
+    }
+  </style>
+  <defs>
+    <marker id="aO" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#F59E0B"/>
+    </marker>
+  </defs>
+
+  <rect x="0.5" y="0.5" width="719" height="349" rx="14" fill="#F8F9FA" stroke="#E4E7EB"/>
+  <text x="360" y="38" text-anchor="middle" font-size="20" font-weight="700" fill="#1F2933">Double hashing — скок с втора хеш функция</text>
+  <text x="360" y="62" text-anchor="middle" font-size="14" fill="#6B7280">Втората функция задава дължината на скока: h₁ + i·h₂</text>
+
+  <!-- клетки 0..5 -->
+  <text x="135" y="148" text-anchor="middle" font-size="13" font-weight="700" fill="#6B7280">0</text>
+  <rect x="90" y="158" width="90" height="56" rx="10" fill="#E1E5EB" stroke="#1F2933" stroke-width="2"/>
+  <text x="235" y="148" text-anchor="middle" font-size="13" font-weight="700" fill="#6B7280">1</text>
+  <rect x="190" y="158" width="90" height="56" rx="10" fill="#E1E5EB" stroke="#1F2933" stroke-width="2"/>
+  <text x="335" y="148" text-anchor="middle" font-size="13" font-weight="700" fill="#6B7280">2</text>
+  <rect x="290" y="158" width="90" height="56" rx="10" fill="#E1E5EB" stroke="#1F2933" stroke-width="2"/>
+  <text x="435" y="148" text-anchor="middle" font-size="13" font-weight="700" fill="#6B7280">3</text>
+  <rect x="390" y="158" width="90" height="56" rx="10" fill="#E1E5EB" stroke="#1F2933" stroke-width="2"/>
+  <text x="535" y="148" text-anchor="middle" font-size="13" font-weight="700" fill="#6B7280">4</text>
+  <rect x="490" y="158" width="90" height="56" rx="10" fill="#E1E5EB" stroke="#1F2933" stroke-width="2"/>
+  <text x="635" y="148" text-anchor="middle" font-size="13" font-weight="700" fill="#6B7280">5</text>
+  <rect x="590" y="158" width="90" height="56" rx="10" fill="#E1E5EB" stroke="#1F2933" stroke-width="2"/>
+
+  <!-- заети клетки в началото -->
+  <rect x="192" y="160" width="86" height="52" rx="8" fill="#4C8BF5"/>
+  <text x="235" y="193" text-anchor="middle" font-size="18" font-weight="700" fill="#FFFFFF">7</text>
+  <rect x="392" y="160" width="86" height="52" rx="8" fill="#4C8BF5"/>
+  <text x="435" y="193" text-anchor="middle" font-size="18" font-weight="700" fill="#FFFFFF">10</text>
+
+  <!-- подсветка на празната клетка 5 -->
+  <g class="fx g5">
+    <rect x="588" y="156" width="94" height="60" rx="11" fill="#12B886" opacity="0.16"/>
+    <rect x="588" y="156" width="94" height="60" rx="11" fill="none" stroke="#12B886" stroke-width="3"/>
+  </g>
+
+  <!-- червени пръстени при заети клетки -->
+  <g class="fx r1">
+    <rect x="186" y="154" width="98" height="64" rx="12" fill="none" stroke="#F03E3E" stroke-width="3"/>
+  </g>
+  <g class="fx r3">
+    <rect x="386" y="154" width="98" height="64" rx="12" fill="none" stroke="#F03E3E" stroke-width="3"/>
+  </g>
+
+  <!-- скокове с h₂ (пунктирни стрелки под клетките) -->
+  <path class="jump1" d="M235,216 C285,244 385,244 435,216" fill="none" stroke="#F59E0B" stroke-width="3" stroke-dasharray="8 6" marker-end="url(#aO)"/>
+  <path class="jump2" d="M435,216 C485,244 585,244 635,216" fill="none" stroke="#F59E0B" stroke-width="3" stroke-dasharray="8 6" marker-end="url(#aO)"/>
+
+  <!-- ключ 18: чака над клетка 1 → скок над 3 → скок над 5 → пада в 5 -->
+  <g class="k18">
+    <rect x="592" y="160" width="86" height="52" rx="8" fill="#4C8BF5"/>
+    <text x="635" y="193" text-anchor="middle" font-size="18" font-weight="700" fill="#FFFFFF">18</text>
+  </g>
+
+  <!-- статус -->
+  <rect x="70" y="252" width="580" height="46" rx="10" fill="#FFFFFF" stroke="#E4E7EB"/>
+  <text class="fx l1" x="360" y="281" text-anchor="middle" font-size="15" font-weight="700" fill="#4C8BF5">1. insert(18): h₁(18) = 1 → клетка 1</text>
+  <text class="fx l2" x="360" y="281" text-anchor="middle" font-size="15" font-weight="700" fill="#F03E3E">2. заета → скок с h₂ = 2: 1 + 2 = 3</text>
+  <text class="fx l3" x="360" y="281" text-anchor="middle" font-size="15" font-weight="700" fill="#F03E3E">3. заета → следващ скок: 3 + 2 = 5</text>
+  <text class="fx l4" x="360" y="281" text-anchor="middle" font-size="15" font-weight="700" fill="#12B886">4. клетка 5 е празна → записваме 18 там</text>
+
+  <text x="360" y="324" text-anchor="middle" font-size="13" fill="#6B7280">Скоковете са с еднаква дължина h₂, а не ±1 като при linear probing</text>
+</svg>

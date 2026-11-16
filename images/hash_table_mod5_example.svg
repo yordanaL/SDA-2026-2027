@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="360" viewBox="0 0 720 360" role="img" aria-label="Хеш таблица — пример с h(k) = k mod 5 и колизия">
+  <style>
+    text { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; }
+  </style>
+  <defs>
+    <marker id="aB" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4C8BF5"/>
+    </marker>
+    <marker id="aR" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#F03E3E"/>
+    </marker>
+  </defs>
+
+  <rect x="0.5" y="0.5" width="719" height="359" rx="14" fill="#F8F9FA" stroke="#E4E7EB"/>
+  <text x="360" y="36" text-anchor="middle" font-size="20" font-weight="700" fill="#1F2933">Хеш таблица — h(k) = k mod 5</text>
+  <text x="360" y="60" text-anchor="middle" font-size="14" fill="#6B7280">Ключовете се записват директно в клетка № h(k) — без обхождане</text>
+
+  <!-- ключове с изчисление -->
+  <rect x="195" y="76" width="110" height="56" rx="10" fill="#4C8BF5"/>
+  <text x="250" y="101" text-anchor="middle" font-size="17" font-weight="700" fill="#FFFFFF">insert(12)</text>
+  <text x="250" y="122" text-anchor="middle" font-size="13" fill="#EAF1FE">12 mod 5 = 2</text>
+
+  <rect x="320" y="76" width="110" height="56" rx="10" fill="#F03E3E"/>
+  <text x="375" y="101" text-anchor="middle" font-size="17" font-weight="700" fill="#FFFFFF">insert(7)</text>
+  <text x="375" y="122" text-anchor="middle" font-size="13" fill="#FDECEC">7 mod 5 = 2</text>
+
+  <rect x="570" y="76" width="110" height="56" rx="10" fill="#4C8BF5"/>
+  <text x="625" y="101" text-anchor="middle" font-size="17" font-weight="700" fill="#FFFFFF">insert(9)</text>
+  <text x="625" y="122" text-anchor="middle" font-size="13" fill="#EAF1FE">9 mod 5 = 4</text>
+
+  <!-- стрелки към клетките -->
+  <path d="M282 134 C330 144 350 152 366 166" fill="none" stroke="#4C8BF5" stroke-width="2.5" marker-end="url(#aB)"/>
+  <line x1="375" y1="134" x2="375" y2="166" stroke="#F03E3E" stroke-width="2.5" marker-end="url(#aR)"/>
+  <line x1="625" y1="134" x2="625" y2="166" stroke="#4C8BF5" stroke-width="2.5" marker-end="url(#aB)"/>
+
+  <!-- клетки на масива -->
+  <rect x="70" y="170" width="110" height="96" rx="10" fill="#E1E5EB" stroke="#1F2933" stroke-width="2"/>
+  <text x="125" y="225" text-anchor="middle" font-size="16" fill="#9AA5B1">—</text>
+  <rect x="195" y="170" width="110" height="96" rx="10" fill="#E1E5EB" stroke="#1F2933" stroke-width="2"/>
+  <text x="250" y="225" text-anchor="middle" font-size="16" fill="#9AA5B1">—</text>
+
+  <rect x="320" y="170" width="110" height="96" rx="10" fill="#E1E5EB" stroke="#1F2933" stroke-width="2"/>
+  <rect x="335" y="180" width="80" height="36" rx="8" fill="#4C8BF5"/>
+  <text x="375" y="204" text-anchor="middle" font-size="17" font-weight="700" fill="#FFFFFF">12</text>
+  <rect x="335" y="222" width="80" height="36" rx="8" fill="#F03E3E"/>
+  <text x="375" y="246" text-anchor="middle" font-size="17" font-weight="700" fill="#FFFFFF">7</text>
+
+  <rect x="445" y="170" width="110" height="96" rx="10" fill="#E1E5EB" stroke="#1F2933" stroke-width="2"/>
+  <text x="500" y="225" text-anchor="middle" font-size="16" fill="#9AA5B1">—</text>
+
+  <rect x="570" y="170" width="110" height="96" rx="10" fill="#E1E5EB" stroke="#1F2933" stroke-width="2"/>
+  <rect x="585" y="200" width="80" height="36" rx="8" fill="#4C8BF5"/>
+  <text x="625" y="224" text-anchor="middle" font-size="17" font-weight="700" fill="#FFFFFF">9</text>
+
+  <!-- индекси -->
+  <text x="125" y="286" text-anchor="middle" font-size="14" font-weight="700" fill="#6B7280">0</text>
+  <text x="250" y="286" text-anchor="middle" font-size="14" font-weight="700" fill="#6B7280">1</text>
+  <text x="375" y="286" text-anchor="middle" font-size="14" font-weight="700" fill="#6B7280">2</text>
+  <text x="500" y="286" text-anchor="middle" font-size="14" font-weight="700" fill="#6B7280">3</text>
+  <text x="625" y="286" text-anchor="middle" font-size="14" font-weight="700" fill="#6B7280">4</text>
+
+  <!-- пръстен на колизията -->
+  <rect x="314" y="164" width="122" height="108" rx="13" fill="none" stroke="#F03E3E" stroke-width="3"/>
+
+  <text x="360" y="316" text-anchor="middle" font-size="14" font-weight="700" fill="#F03E3E">⚠ колизия: h(12) = h(7) = 2 — клетка 2 вече е заета</text>
+  <text x="360" y="340" text-anchor="middle" font-size="13" fill="#6B7280">search(12) → клетка 2 → намираме 12 веднъж. А къде записваме 7? → раздел 4</text>
+</svg>

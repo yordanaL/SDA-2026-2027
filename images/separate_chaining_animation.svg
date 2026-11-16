@@ -1,0 +1,106 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="440" viewBox="0 0 720 440" role="img" aria-label="Separate chaining — анимация: вмъкване при колизия">
+  <style>
+    text { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; }
+    .fly { animation: 18s infinite; }
+    .k12 { animation-name: k12; animation-timing-function: step-end; }
+    .k21 { animation-name: k21; animation-timing-function: step-end; }
+    @keyframes k12 {
+      0% { transform: translate(345px, -93px); opacity: 1; animation-timing-function: step-end; }
+      5% { transform: translate(345px, -93px); opacity: 1; animation-timing-function: ease-in-out; }
+      13% { transform: translate(0, 0); opacity: 1; animation-timing-function: step-end; }
+      92% { transform: translate(0, 0); opacity: 1; animation-timing-function: step-end; }
+      93% { transform: translate(0, 0); opacity: 0; animation-timing-function: step-end; }
+      99% { transform: translate(345px, -93px); opacity: 0; animation-timing-function: step-end; }
+      100% { transform: translate(345px, -93px); opacity: 1; }
+    }
+    @keyframes k21 {
+      0% { transform: translate(225px, -93px); opacity: 0; animation-timing-function: step-end; }
+      31% { transform: translate(225px, -93px); opacity: 0; animation-timing-function: step-end; }
+      32% { transform: translate(225px, -93px); opacity: 1; animation-timing-function: step-end; }
+      40% { transform: translate(225px, -93px); opacity: 1; animation-timing-function: ease-in-out; }
+      48% { transform: translate(0, 0); opacity: 1; animation-timing-function: step-end; }
+      92% { transform: translate(0, 0); opacity: 1; animation-timing-function: step-end; }
+      93% { transform: translate(0, 0); opacity: 0; animation-timing-function: step-end; }
+      100% { transform: translate(225px, -93px); opacity: 0; }
+    }
+    .fx { opacity: 0; animation-duration: 18s; animation-timing-function: step-end; animation-iteration-count: infinite; }
+    .ptr1 { animation-name: ptr1; }
+    .a1 { animation-name: a1; }
+    .a2 { animation-name: a2; }
+    .ring { animation-name: ring; }
+    .l1 { animation-name: l1; }
+    .l2 { animation-name: l2; }
+    .l3 { animation-name: l3; }
+    @keyframes ptr1 { 0% { opacity: 1; } 13% { opacity: 0; } 93% { opacity: 0; } 94% { opacity: 1; } 100% { opacity: 1; } }
+    @keyframes a1 { 0% { opacity: 0; } 13% { opacity: 1; } 93% { opacity: 1; } 94% { opacity: 0; } 100% { opacity: 0; } }
+    @keyframes a2 { 0% { opacity: 0; } 48% { opacity: 1; } 93% { opacity: 1; } 94% { opacity: 0; } 100% { opacity: 0; } }
+    @keyframes ring { 0% { opacity: 0; } 32% { opacity: 1; } 50% { opacity: 0; } 100% { opacity: 0; } }
+    @keyframes l1 { 0% { opacity: 1; } 31% { opacity: 0; } 100% { opacity: 0; } }
+    @keyframes l2 { 0% { opacity: 0; } 31% { opacity: 1; } 50% { opacity: 0; } 100% { opacity: 0; } }
+    @keyframes l3 { 0% { opacity: 0; } 54% { opacity: 1; } 90% { opacity: 0; } 100% { opacity: 0; } }
+  </style>
+  <defs>
+    <marker id="aD" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#1F2933"/>
+    </marker>
+  </defs>
+
+  <rect x="0.5" y="0.5" width="719" height="439" rx="14" fill="#F8F9FA" stroke="#E4E7EB"/>
+  <text x="360" y="40" text-anchor="middle" font-size="20" font-weight="700" fill="#1F2933">Separate chaining — вмъкване при колизия</text>
+  <text x="360" y="66" text-anchor="middle" font-size="14" fill="#6B7280">Всяка клетка пази списък с добавените двойки</text>
+
+  <!-- кофи (buckets) -->
+  <text x="88" y="143" text-anchor="end" font-size="14" font-weight="700" fill="#1F2933">0</text>
+  <rect x="100" y="110" width="100" height="56" rx="10" fill="#E1E5EB" stroke="#1F2933" stroke-width="2"/>
+  <text x="88" y="213" text-anchor="end" font-size="14" font-weight="700" fill="#1F2933">1</text>
+  <rect x="100" y="180" width="100" height="56" rx="10" fill="#E1E5EB" stroke="#1F2933" stroke-width="2"/>
+  <text x="88" y="283" text-anchor="end" font-size="14" font-weight="700" fill="#1F2933">2</text>
+  <rect x="100" y="250" width="100" height="56" rx="10" fill="#E1E5EB" stroke="#1F2933" stroke-width="2"/>
+  <text x="88" y="353" text-anchor="end" font-size="14" font-weight="700" fill="#1F2933">3</text>
+  <rect x="100" y="320" width="100" height="56" rx="10" fill="#E1E5EB" stroke="#1F2933" stroke-width="2"/>
+
+  <!-- статични възли -->
+  <rect x="230" y="113" width="100" height="50" rx="10" fill="#4C8BF5"/>
+  <text x="280" y="144" text-anchor="middle" font-size="18" font-weight="700" fill="#FFFFFF">5</text>
+  <line x1="202" y1="138" x2="226" y2="138" stroke="#1F2933" stroke-width="2" marker-end="url(#aD)"/>
+  <text x="215" y="213" font-size="13" fill="#9AA5B1">nullptr</text>
+  <text x="215" y="283" font-size="13" fill="#9AA5B1">nullptr</text>
+  <rect x="230" y="323" width="100" height="50" rx="10" fill="#4C8BF5"/>
+  <text x="280" y="354" text-anchor="middle" font-size="18" font-weight="700" fill="#FFFFFF">7</text>
+  <line x1="202" y1="348" x2="226" y2="348" stroke="#1F2933" stroke-width="2" marker-end="url(#aD)"/>
+  <line x1="332" y1="348" x2="346" y2="348" stroke="#1F2933" stroke-width="2" marker-end="url(#aD)"/>
+  <rect x="350" y="323" width="100" height="50" rx="10" fill="#4C8BF5"/>
+  <text x="400" y="354" text-anchor="middle" font-size="18" font-weight="700" fill="#FFFFFF">33</text>
+
+  <!-- анимирани връзки -->
+  <g class="fx a1">
+    <line x1="202" y1="208" x2="226" y2="208" stroke="#1F2933" stroke-width="2" marker-end="url(#aD)"/>
+    <line x1="332" y1="208" x2="346" y2="208" stroke="#1F2933" stroke-width="2" marker-end="url(#aD)" opacity="0"/>
+  </g>
+  <g class="fx a2">
+    <line x1="332" y1="208" x2="346" y2="208" stroke="#1F2933" stroke-width="2" marker-end="url(#aD)"/>
+  </g>
+  <g class="fx ptr1">
+    <text x="215" y="213" font-size="13" fill="#9AA5B1">nullptr</text>
+  </g>
+
+  <!-- червен пръстен при колизия -->
+  <g class="fx ring">
+    <rect x="96" y="176" width="108" height="64" rx="12" fill="none" stroke="#F03E3E" stroke-width="3"/>
+  </g>
+
+  <!-- летящи ключове -->
+  <g class="fly k12">
+    <rect x="230" y="183" width="100" height="50" rx="10" fill="#4C8BF5"/>
+    <text x="280" y="214" text-anchor="middle" font-size="18" font-weight="700" fill="#FFFFFF">12</text>
+  </g>
+  <g class="fly k21">
+    <rect x="350" y="183" width="100" height="50" rx="10" fill="#4C8BF5"/>
+    <text x="400" y="214" text-anchor="middle" font-size="18" font-weight="700" fill="#FFFFFF">21</text>
+  </g>
+
+  <!-- статус -->
+  <text class="fx l1" x="360" y="415" text-anchor="middle" font-size="15" font-weight="700" fill="#4C8BF5">insert(12): h(12) = 1 → нов списък в клетка 1</text>
+  <text class="fx l2" x="360" y="415" text-anchor="middle" font-size="15" font-weight="700" fill="#F03E3E">insert(21): h(21) = 1 — колизия!</text>
+  <text class="fx l3" x="360" y="415" text-anchor="middle" font-size="15" font-weight="700" fill="#12B886">решение: добавяме в същия списък — търсим само в клетка 1</text>
+</svg>

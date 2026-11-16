@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="430" viewBox="0 0 720 430" role="img" aria-label="Linear probing — търсене на следваща празна клетка">
+  <style>
+    text { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; }
+  </style>
+  <defs>
+    <marker id="aO" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#F59E0B"/>
+    </marker>
+    <marker id="aD" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#1F2933"/>
+    </marker>
+  </defs>
+  <rect x="0.5" y="0.5" width="719" height="429" rx="14" fill="#F8F9FA" stroke="#E4E7EB"/>
+  <text x="360" y="40" text-anchor="middle" font-size="20" font-weight="700" fill="#1F2933">Linear probing — търсене на следваща празна клетка</text>
+  <text x="360" y="66" text-anchor="middle" font-size="14" fill="#6B7280">h(18) = 3, но клетка 3 е заета → пробираме 4 → 5 → записваме там</text>
+
+  <rect x="112" y="180" width="62" height="62" fill="#FFFFFF" stroke="#1F2933" stroke-width="2"/>
+  <rect x="174" y="180" width="62" height="62" fill="#FFFFFF" stroke="#1F2933" stroke-width="2"/>
+  <rect x="236" y="180" width="62" height="62" fill="#FFFFFF" stroke="#1F2933" stroke-width="2"/>
+  <rect x="298" y="180" width="62" height="62" fill="#E1E5EB" stroke="#1F2933" stroke-width="2"/>
+  <rect x="360" y="180" width="62" height="62" fill="#E1E5EB" stroke="#1F2933" stroke-width="2"/>
+  <rect x="422" y="180" width="62" height="62" fill="#FFFFFF" stroke="#1F2933" stroke-width="2"/>
+  <rect x="484" y="180" width="62" height="62" fill="#FFFFFF" stroke="#1F2933" stroke-width="2"/>
+  <rect x="546" y="180" width="62" height="62" fill="#FFFFFF" stroke="#1F2933" stroke-width="2"/>
+
+  <text x="329" y="218" text-anchor="middle" font-size="17" font-weight="700" fill="#1F2933">10</text>
+  <text x="391" y="218" text-anchor="middle" font-size="17" font-weight="700" fill="#1F2933">25</text>
+
+  <text x="143" y="264" text-anchor="middle" font-size="13" fill="#9AA5B1">0</text>
+  <text x="205" y="264" text-anchor="middle" font-size="13" fill="#9AA5B1">1</text>
+  <text x="267" y="264" text-anchor="middle" font-size="13" fill="#9AA5B1">2</text>
+  <text x="329" y="264" text-anchor="middle" font-size="13" fill="#9AA5B1">3</text>
+  <text x="391" y="264" text-anchor="middle" font-size="13" fill="#9AA5B1">4</text>
+  <text x="453" y="264" text-anchor="middle" font-size="13" fill="#9AA5B1">5</text>
+  <text x="515" y="264" text-anchor="middle" font-size="13" fill="#9AA5B1">6</text>
+  <text x="577" y="264" text-anchor="middle" font-size="13" fill="#9AA5B1">7</text>
+
+  <text x="329" y="150" text-anchor="middle" font-size="14" font-weight="700" fill="#F59E0B">h(18) = 3</text>
+  <line x1="329" y1="156" x2="329" y2="174" stroke="#F59E0B" stroke-width="2" marker-end="url(#aO)"/>
+
+  <path d="M 352 211 L 366 211" stroke="#F59E0B" stroke-width="2.5" marker-end="url(#aO)"/>
+  <path d="M 414 211 L 428 211" stroke="#F59E0B" stroke-width="2.5" marker-end="url(#aO)"/>
+  <text x="391" y="300" text-anchor="middle" font-size="13" fill="#6B7280">заета → пробираме</text>
+
+  <rect x="422" y="180" width="62" height="62" fill="none" stroke="#12B886" stroke-width="3"/>
+  <text x="453" y="330" text-anchor="middle" font-size="14" font-weight="700" fill="#12B886">празна → записваме 18 тук</text>
+  <line x1="453" y1="308" x2="453" y2="248" stroke="#12B886" stroke-width="2" marker-end="url(#aD)"/>
+
+  <text x="360" y="398" text-anchor="middle" font-size="13" fill="#6B7280">Клетките 3 и 4 са „кластер" — колкото по-пълна е таблицата, толкова по-дълго пробиране</text>
+</svg>
