@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 300" width="700" height="300" role="img" aria-label="Топка, която подскача по пода на случаен принцип, докато цветните ленти се подреждат, а после се търкаля от най-високата надолу">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0d1117"/>
+      <stop offset="100%" stop-color="#161b22"/>
+    </linearGradient>
+    <radialGradient id="ballGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#e3b341" stop-opacity="0.4"/>
+      <stop offset="100%" stop-color="#e3b341" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <!-- фон и рамка (всичко остава вътре в очертанията) -->
+  <rect width="700" height="300" rx="16" fill="url(#bg)"/>
+  <rect x="12" y="12" width="676" height="276" rx="12" fill="none" stroke="#30363d"/>
+
+  <!-- тиха точкова решетка -->
+  <g fill="#21262d">
+    <circle cx="70" cy="46" r="2"/><circle cx="130" cy="46" r="2"/><circle cx="70" cy="106" r="2"/>
+    <circle cx="640" cy="46" r="2"/><circle cx="600" cy="106" r="2"/><circle cx="640" cy="166" r="2"/>
+    <circle cx="60" cy="166" r="2"/><circle cx="120" cy="226" r="2"/>
+  </g>
+
+  <!-- под: топката се докосва до него при всеки подскок -->
+  <line x1="30" y1="272" x2="670" y2="272" stroke="#30363d" stroke-width="2"/>
+
+  <!-- лентите: докато топката подскача по пода, те се подреждат
+       в нарастващ ред (до 50% от цикъла), стоят наредени, докато топката
+       се търкаля по върховете им, и после се разбъркват отново -->
+  <rect x="40"  y="202" width="60" height="70"  rx="6" fill="#ff7b72">
+    <animate attributeName="x" values="40;120;120;40" keyTimes="0;0.5;0.9;1" dur="8s" repeatCount="indefinite"/>
+  </rect>
+  <rect x="120" y="122" width="60" height="150" rx="6" fill="#ffa657">
+    <animate attributeName="x" values="120;440;440;120" keyTimes="0;0.5;0.9;1" dur="8s" repeatCount="indefinite"/>
+  </rect>
+  <rect x="200" y="222" width="60" height="50"  rx="6" fill="#d29922">
+    <animate attributeName="x" values="200;40;40;200" keyTimes="0;0.5;0.9;1" dur="8s" repeatCount="indefinite"/>
+  </rect>
+  <rect x="280" y="92"  width="60" height="180" rx="6" fill="#3fb950">
+    <animate attributeName="x" values="280;600;600;280" keyTimes="0;0.5;0.9;1" dur="8s" repeatCount="indefinite"/>
+  </rect>
+  <rect x="360" y="172" width="60" height="100" rx="6" fill="#58a6ff">
+    <animate attributeName="x" values="360;280;280;360" keyTimes="0;0.5;0.9;1" dur="8s" repeatCount="indefinite"/>
+  </rect>
+  <rect x="440" y="142" width="60" height="130" rx="6" fill="#bc8cff">
+    <animate attributeName="x" values="440;360;360;440" keyTimes="0;0.5;0.9;1" dur="8s" repeatCount="indefinite"/>
+  </rect>
+  <rect x="520" y="192" width="60" height="80"  rx="6" fill="#39c5cf">
+    <animate attributeName="x" values="520;200;200;520" keyTimes="0;0.5;0.9;1" dur="8s" repeatCount="indefinite"/>
+  </rect>
+  <rect x="600" y="112" width="60" height="160" rx="6" fill="#f778ba">
+    <animate attributeName="x" values="600;520;520;600" keyTimes="0;0.5;0.9;1" dur="8s" repeatCount="indefinite"/>
+  </rect>
+
+  <!-- пътят на единствената топка:
+       фаза A (0 → 50%): пет подскока по пода — всеки докосва пода и се отскача нагоре;
+       последното отскачане я изстрелва върху най-високата лента, точно когато
+       лентите се подредят;
+       фаза B (50% → 90%): търкаляне от най-високата лента надолу по всички;
+       фаза C (90% → 1): подскок от най-ниската лента обратно на пода -->
+  <circle r="26" fill="url(#ballGlow)">
+    <animateMotion dur="8s" repeatCount="indefinite"
+      keyPoints="0;0.7279;0.9752;1" keyTimes="0;0.5;0.9;1"
+      path="M70 259 Q127.5 -30 185 259 Q242.5 -110 300 259 Q357.5 -50 415 259 Q472.5 -130 530 259 Q585 45 630 79 L550 99 L470 109 L390 129 L310 159 L230 179 L150 189 L70 209 Q95 245 70 259"/>
+  </circle>
+
+  <!-- самата топка -->
+  <circle r="13" fill="#e3b341" stroke="#9e6a03" stroke-width="2">
+    <animateMotion dur="8s" repeatCount="indefinite"
+      keyPoints="0;0.7279;0.9752;1" keyTimes="0;0.5;0.9;1"
+      path="M70 259 Q127.5 -30 185 259 Q242.5 -110 300 259 Q357.5 -50 415 259 Q472.5 -130 530 259 Q585 45 630 79 L550 99 L470 109 L390 129 L310 159 L230 179 L150 189 L70 209 Q95 245 70 259"/>
+  </circle>
+</svg>

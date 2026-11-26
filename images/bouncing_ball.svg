@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 300" width="700" height="300" role="img" aria-label="Топка, която подскача нагоре по стълбите и се връща надолу">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0d1117"/>
+      <stop offset="100%" stop-color="#161b22"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#3fb950" stop-opacity="0.55"/>
+      <stop offset="100%" stop-color="#3fb950" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <!-- фон -->
+  <rect width="700" height="300" rx="16" fill="url(#bg)"/>
+  <rect x="12" y="12" width="676" height="276" rx="12" fill="none" stroke="#30363d"/>
+
+  <!-- тиха точкова решетка -->
+  <g fill="#21262d">
+    <circle cx="70" cy="70" r="2"/><circle cx="130" cy="70" r="2"/><circle cx="70" cy="130" r="2"/>
+    <circle cx="620" cy="110" r="2"/><circle cx="660" cy="170" r="2"/><circle cx="600" cy="210" r="2"/>
+    <circle cx="100" cy="200" r="2"/><circle cx="60" cy="240" r="2"/>
+  </g>
+
+  <!-- под -->
+  <line x1="30" y1="260" x2="670" y2="260" stroke="#30363d" stroke-width="2"/>
+
+  <!-- стълбите: всеки стъпак е една стъпка нагоре -->
+  <rect x="180" y="228" width="60" height="32"  rx="6" fill="#ff7b72"/>
+  <rect x="240" y="196" width="60" height="64"  rx="6" fill="#ffa657"/>
+  <rect x="300" y="164" width="60" height="96"  rx="6" fill="#d29922"/>
+  <rect x="360" y="132" width="60" height="128" rx="6" fill="#3fb950"/>
+  <rect x="420" y="100" width="60" height="160" rx="6" fill="#58a6ff"/>
+  <rect x="480" y="68"  width="60" height="192" rx="6" fill="#bc8cff"/>
+
+  <!-- целта на върха -->
+  <circle cx="530" cy="30" r="34" fill="url(#glow)">
+    <animate attributeName="opacity" values="0.5;1;0.5" dur="3s" repeatCount="indefinite"/>
+  </circle>
+  <line x1="530" y1="68" x2="530" y2="8" stroke="#8b949e" stroke-width="3" stroke-linecap="round"/>
+  <path d="M530 8 L562 19 L530 30 Z" fill="#3fb950">
+    <animate attributeName="opacity" values="1;1;0.35;1" keyTimes="0;0.48;0.52;1" dur="6s" repeatCount="indefinite"/>
+  </path>
+
+  <!-- пътят на топката: подскок по всеки стъпак нагоре, после обратно надолу -->
+  <path id="hopPath"
+        d="M150 246
+           Q180 118 210 214
+           Q240 86 270 182
+           Q300 54 330 150
+           Q360 22 390 118
+           Q420 -10 450 86
+           Q480 -22 510 54
+           Q480 -22 450 86
+           Q420 10 390 118
+           Q360 42 330 150
+           Q300 74 270 182
+           Q240 78 210 214
+           Q180 138 150 246"
+        fill="none" stroke="none"/>
+
+  <!-- следа зад топката -->
+  <circle r="13" fill="#e3b341" opacity="0.18">
+    <animateMotion dur="6s" repeatCount="indefinite" begin="-1.2s" path="M150 246 Q180 118 210 214 Q240 86 270 182 Q300 54 330 150 Q360 22 390 118 Q420 -10 450 86 Q480 -22 510 54 Q480 -22 450 86 Q420 10 390 118 Q360 42 330 150 Q300 74 270 182 Q240 78 210 214 Q180 138 150 246"/>
+  </circle>
+
+  <!-- самата топка -->
+  <circle r="14" fill="#e3b341" stroke="#9e6a03" stroke-width="2">
+    <animateMotion dur="6s" repeatCount="indefinite" path="M150 246 Q180 118 210 214 Q240 86 270 182 Q300 54 330 150 Q360 22 390 118 Q420 -10 450 86 Q480 -22 510 54 Q480 -22 450 86 Q420 10 390 118 Q360 42 330 150 Q300 74 270 182 Q240 78 210 214 Q180 138 150 246"/>
+  </circle>
+</svg>

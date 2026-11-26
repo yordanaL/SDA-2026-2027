@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 300" width="700" height="300" role="img" aria-label="Анимация: подреждане на цветни ленти">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0d1117"/>
+      <stop offset="100%" stop-color="#161b22"/>
+    </linearGradient>
+  </defs>
+
+  <!-- фон -->
+  <rect width="700" height="300" rx="16" fill="url(#bg)"/>
+  <rect x="12" y="12" width="676" height="276" rx="12" fill="none" stroke="#30363d"/>
+
+  <!-- заглавие, сменящо цвета си -->
+  <text x="350" y="42" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="20" font-weight="bold" fill="#58a6ff">
+    SDA 2026/2027
+    <animate attributeName="fill" values="#58a6ff;#f78166;#7ee787;#d2a8ff;#58a6ff" dur="6s" repeatCount="indefinite"/>
+  </text>
+
+  <!-- линия на пода -->
+  <line x1="30" y1="230" x2="670" y2="230" stroke="#30363d" stroke-width="2"/>
+
+  <!-- лентите: подреждат се в нарастващ ред и после се разбъркват отново -->
+  <rect x="40"  y="160" width="60" height="70"  rx="6" fill="#ff7b72">
+    <animate attributeName="x" values="40;120;120;40" keyTimes="0;0.4;0.6;1" dur="4s" repeatCount="indefinite"/>
+  </rect>
+  <rect x="120" y="80"  width="60" height="150" rx="6" fill="#ffa657">
+    <animate attributeName="x" values="120;440;440;120" keyTimes="0;0.4;0.6;1" dur="4s" repeatCount="indefinite"/>
+  </rect>
+  <rect x="200" y="180" width="60" height="50"  rx="6" fill="#d29922">
+    <animate attributeName="x" values="200;40;40;200" keyTimes="0;0.4;0.6;1" dur="4s" repeatCount="indefinite"/>
+  </rect>
+  <rect x="280" y="50"  width="60" height="180" rx="6" fill="#3fb950">
+    <animate attributeName="x" values="280;600;600;280" keyTimes="0;0.4;0.6;1" dur="4s" repeatCount="indefinite"/>
+  </rect>
+  <rect x="360" y="130" width="60" height="100" rx="6" fill="#58a6ff">
+    <animate attributeName="x" values="360;280;280;360" keyTimes="0;0.4;0.6;1" dur="4s" repeatCount="indefinite"/>
+  </rect>
+  <rect x="440" y="100" width="60" height="130" rx="6" fill="#bc8cff">
+    <animate attributeName="x" values="440;360;360;440" keyTimes="0;0.4;0.6;1" dur="4s" repeatCount="indefinite"/>
+  </rect>
+  <rect x="520" y="150" width="60" height="80"  rx="6" fill="#39c5cf">
+    <animate attributeName="x" values="520;200;200;520" keyTimes="0;0.4;0.6;1" dur="4s" repeatCount="indefinite"/>
+  </rect>
+  <rect x="600" y="70"  width="60" height="160" rx="6" fill="#f778ba">
+    <animate attributeName="x" values="600;520;520;600" keyTimes="0;0.4;0.6;1" dur="4s" repeatCount="indefinite"/>
+  </rect>
+
+  <!-- топка, която подскача над лентите -->
+  <circle r="11" fill="#e3b341" stroke="#9e6a03">
+    <animate attributeName="cx" values="40;660" dur="4s" repeatCount="indefinite"/>
+    <animate attributeName="cy" values="219;150;219;150;219" keyTimes="0;0.25;0.5;0.75;1" dur="2s" repeatCount="indefinite"/>
+  </circle>
+
+  <!-- мигащ надпис -->
+  <text x="350" y="272" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="14" fill="#8b949e">
+    sorting... <tspan fill="#3fb950">O(n log n)</tspan> — просто игра с ленти
+    <animate attributeName="opacity" values="1;0.35;1" dur="1.5s" repeatCount="indefinite"/>
+  </text>
+</svg>
